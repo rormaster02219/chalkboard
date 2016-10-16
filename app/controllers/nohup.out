@@ -1,0 +1,482 @@
+/root/.rvm/gems/ruby-2.0.0-p451/gems/bundler-1.7.2/lib/bundler.rb:302: warning: Insecure world writable dir /root in PATH, mode 040777
+/root/.rvm/gems/ruby-2.0.0-p451/gems/bundler-1.7.2/lib/bundler.rb:302: warning: Insecure world writable dir /root in PATH, mode 040777
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[2015-08-05 12:27:05] INFO  WEBrick 1.3.1
+[2015-08-05 12:27:05] INFO  ruby 2.0.0 (2014-02-24) [x86_64-linux]
+[2015-08-05 12:27:05] INFO  WEBrick::HTTPServer#start: pid=11192 port=80
+=> Booting WEBrick
+=> Rails 4.0.0 application starting in production on http://0.0.0.0:80
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+I, [2015-08-05T12:30:31.647566 #11192]  INFO -- : Started GET "/" for 180.76.15.138 at 2015-08-05 12:30:31 +0000
+I, [2015-08-05T12:30:31.647659 #11192]  INFO -- : Started GET "/" for 180.76.15.138 at 2015-08-05 12:30:31 +0000
+I, [2015-08-05T12:30:54.552317 #11192]  INFO -- : Started GET "/" for 180.76.15.146 at 2015-08-05 12:30:54 +0000
+I, [2015-08-05T12:30:54.552467 #11192]  INFO -- : Started GET "/" for 180.76.15.146 at 2015-08-05 12:30:54 +0000
+I, [2015-08-05T12:42:21.282599 #11192]  INFO -- : Started GET "/" for 54.147.221.35 at 2015-08-05 12:42:21 +0000
+I, [2015-08-05T12:42:21.282678 #11192]  INFO -- : Started GET "/" for 54.147.221.35 at 2015-08-05 12:42:21 +0000
+I, [2015-08-05T12:44:04.302997 #11192]  INFO -- : Started GET "/subjects/physics" for 54.163.136.95 at 2015-08-05 12:44:04 +0000
+I, [2015-08-05T12:44:04.303103 #11192]  INFO -- : Started GET "/subjects/physics" for 54.163.136.95 at 2015-08-05 12:44:04 +0000
+I, [2015-08-05T12:44:04.609246 #11192]  INFO -- : Started GET "/signin" for 54.163.136.95 at 2015-08-05 12:44:04 +0000
+I, [2015-08-05T12:44:04.609310 #11192]  INFO -- : Started GET "/signin" for 54.163.136.95 at 2015-08-05 12:44:04 +0000
+I, [2015-08-05T12:44:14.003038 #11192]  INFO -- : Started GET "/subjects/chemistry" for 50.16.32.235 at 2015-08-05 12:44:14 +0000
+I, [2015-08-05T12:44:14.003117 #11192]  INFO -- : Started GET "/subjects/chemistry" for 50.16.32.235 at 2015-08-05 12:44:14 +0000
+I, [2015-08-05T12:44:14.303413 #11192]  INFO -- : Started GET "/signin" for 50.16.32.235 at 2015-08-05 12:44:14 +0000
+I, [2015-08-05T12:44:14.303487 #11192]  INFO -- : Started GET "/signin" for 50.16.32.235 at 2015-08-05 12:44:14 +0000
+I, [2015-08-05T12:45:07.220232 #11192]  INFO -- : Started GET "/subjects/mathematics" for 54.161.192.59 at 2015-08-05 12:45:07 +0000
+I, [2015-08-05T12:45:07.220302 #11192]  INFO -- : Started GET "/subjects/mathematics" for 54.161.192.59 at 2015-08-05 12:45:07 +0000
+[2015-08-05 12:45:07] ERROR Errno::ECONNRESET: Connection reset by peer
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `eof?'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `run'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+I, [2015-08-05T12:45:07.621988 #11192]  INFO -- : Started GET "/signin" for 54.161.192.59 at 2015-08-05 12:45:07 +0000
+I, [2015-08-05T12:45:07.622074 #11192]  INFO -- : Started GET "/signin" for 54.161.192.59 at 2015-08-05 12:45:07 +0000
+I, [2015-08-05T12:45:28.568409 #11192]  INFO -- : Started GET "/signup" for 54.161.192.59 at 2015-08-05 12:45:28 +0000
+I, [2015-08-05T12:45:28.568494 #11192]  INFO -- : Started GET "/signup" for 54.161.192.59 at 2015-08-05 12:45:28 +0000
+I, [2015-08-05T12:45:43.357254 #11192]  INFO -- : Started GET "/signin" for 54.161.192.59 at 2015-08-05 12:45:43 +0000
+I, [2015-08-05T12:45:43.357332 #11192]  INFO -- : Started GET "/signin" for 54.161.192.59 at 2015-08-05 12:45:43 +0000
+I, [2015-08-05T12:51:06.438542 #11192]  INFO -- : Started GET "/subjects/physics" for 54.204.254.216 at 2015-08-05 12:51:06 +0000
+I, [2015-08-05T12:51:06.438643 #11192]  INFO -- : Started GET "/subjects/physics" for 54.204.254.216 at 2015-08-05 12:51:06 +0000
+I, [2015-08-05T12:51:06.475688 #11192]  INFO -- : Started GET "/signin" for 54.204.254.216 at 2015-08-05 12:51:06 +0000
+I, [2015-08-05T12:51:06.475815 #11192]  INFO -- : Started GET "/signin" for 54.204.254.216 at 2015-08-05 12:51:06 +0000
+I, [2015-08-05T12:51:06.903151 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.204.254.216 at 2015-08-05 12:51:06 +0000
+I, [2015-08-05T12:51:06.903390 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.204.254.216 at 2015-08-05 12:51:06 +0000
+I, [2015-08-05T12:51:06.910359 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.204.254.216 at 2015-08-05 12:51:06 +0000
+I, [2015-08-05T12:51:06.911835 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.204.254.216 at 2015-08-05 12:51:06 +0000
+I, [2015-08-05T12:51:07.261085 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.204.254.216 at 2015-08-05 12:51:07 +0000
+I, [2015-08-05T12:51:07.261177 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.204.254.216 at 2015-08-05 12:51:07 +0000
+I, [2015-08-05T12:51:07.652919 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.204.254.216 at 2015-08-05 12:51:07 +0000
+I, [2015-08-05T12:51:07.652990 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.204.254.216 at 2015-08-05 12:51:07 +0000
+I, [2015-08-05T12:51:07.803257 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.204.254.216 at 2015-08-05 12:51:07 +0000
+I, [2015-08-05T12:51:07.803333 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.204.254.216 at 2015-08-05 12:51:07 +0000
+I, [2015-08-05T12:51:08.475174 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.204.254.216 at 2015-08-05 12:51:08 +0000
+I, [2015-08-05T12:51:08.475256 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.204.254.216 at 2015-08-05 12:51:08 +0000
+I, [2015-08-05T12:51:09.067029 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.204.254.216 at 2015-08-05 12:51:09 +0000
+I, [2015-08-05T12:51:09.067104 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.204.254.216 at 2015-08-05 12:51:09 +0000
+I, [2015-08-05T12:51:09.083452 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.204.254.216 at 2015-08-05 12:51:09 +0000
+I, [2015-08-05T12:51:09.083495 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.204.254.216 at 2015-08-05 12:51:09 +0000
+I, [2015-08-05T12:51:09.111509 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.204.254.216 at 2015-08-05 12:51:09 +0000
+I, [2015-08-05T12:51:09.111574 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.204.254.216 at 2015-08-05 12:51:09 +0000
+I, [2015-08-05T12:51:09.129527 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.204.254.216 at 2015-08-05 12:51:09 +0000
+I, [2015-08-05T12:51:09.129571 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.204.254.216 at 2015-08-05 12:51:09 +0000
+I, [2015-08-05T12:51:44.892324 #11192]  INFO -- : Started GET "/subjects/chemistry" for 54.166.215.77 at 2015-08-05 12:51:44 +0000
+I, [2015-08-05T12:51:44.892404 #11192]  INFO -- : Started GET "/subjects/chemistry" for 54.166.215.77 at 2015-08-05 12:51:44 +0000
+I, [2015-08-05T12:51:44.927205 #11192]  INFO -- : Started GET "/signin" for 54.166.215.77 at 2015-08-05 12:51:44 +0000
+I, [2015-08-05T12:51:44.927288 #11192]  INFO -- : Started GET "/signin" for 54.166.215.77 at 2015-08-05 12:51:44 +0000
+I, [2015-08-05T12:51:45.310238 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.312255 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.314143 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.315496 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.462278 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.463806 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.627210 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.627290 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.684655 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.684754 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.907995 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.908096 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.969260 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.971332 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.977261 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.977374 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.979967 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.980016 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.982209 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T12:51:45.982261 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.166.215.77 at 2015-08-05 12:51:45 +0000
+I, [2015-08-05T13:03:34.219645 #11192]  INFO -- : Started GET "/subjects/mathematics" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.219716 #11192]  INFO -- : Started GET "/subjects/mathematics" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.254692 #11192]  INFO -- : Started GET "/signin" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.254773 #11192]  INFO -- : Started GET "/signin" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.460680 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.460773 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.492283 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.492372 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.657142 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.657237 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.882263 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:34.882329 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.157.246.47 at 2015-08-05 13:03:34 +0000
+I, [2015-08-05T13:03:35.003521 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.003589 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.337836 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.337915 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.348262 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.348309 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.350650 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.350714 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.353900 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.353968 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.372857 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:03:35.372923 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.157.246.47 at 2015-08-05 13:03:35 +0000
+I, [2015-08-05T13:09:38.934850 #11192]  INFO -- : Started GET "/signup" for 54.157.246.47 at 2015-08-05 13:09:38 +0000
+I, [2015-08-05T13:09:38.934939 #11192]  INFO -- : Started GET "/signup" for 54.157.246.47 at 2015-08-05 13:09:38 +0000
+I, [2015-08-05T13:09:39.494466 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.157.246.47 at 2015-08-05 13:09:39 +0000
+I, [2015-08-05T13:09:39.494650 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.157.246.47 at 2015-08-05 13:09:39 +0000
+I, [2015-08-05T13:09:39.498728 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:09:39 +0000
+I, [2015-08-05T13:09:39.498774 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:09:39 +0000
+I, [2015-08-05T13:09:39.781034 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:09:39 +0000
+I, [2015-08-05T13:09:39.781135 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:09:39 +0000
+I, [2015-08-05T13:09:40.197077 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.197164 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.297450 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.297532 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.723188 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.723320 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.731150 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.731196 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.733360 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.733425 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.735571 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.735617 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.737711 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:09:40.737768 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.157.246.47 at 2015-08-05 13:09:40 +0000
+I, [2015-08-05T13:10:13.450932 #11192]  INFO -- : Started GET "/" for 54.196.38.163 at 2015-08-05 13:10:13 +0000
+I, [2015-08-05T13:10:13.451001 #11192]  INFO -- : Started GET "/" for 54.196.38.163 at 2015-08-05 13:10:13 +0000
+I, [2015-08-05T13:10:13.877063 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.196.38.163 at 2015-08-05 13:10:13 +0000
+I, [2015-08-05T13:10:13.877140 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.196.38.163 at 2015-08-05 13:10:13 +0000
+I, [2015-08-05T13:10:13.943683 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.196.38.163 at 2015-08-05 13:10:13 +0000
+I, [2015-08-05T13:10:13.943814 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.196.38.163 at 2015-08-05 13:10:13 +0000
+I, [2015-08-05T13:10:14.278444 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.196.38.163 at 2015-08-05 13:10:14 +0000
+I, [2015-08-05T13:10:14.278519 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.196.38.163 at 2015-08-05 13:10:14 +0000
+I, [2015-08-05T13:10:14.599192 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.196.38.163 at 2015-08-05 13:10:14 +0000
+I, [2015-08-05T13:10:14.599257 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.196.38.163 at 2015-08-05 13:10:14 +0000
+I, [2015-08-05T13:10:14.817741 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.196.38.163 at 2015-08-05 13:10:14 +0000
+I, [2015-08-05T13:10:14.817809 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.196.38.163 at 2015-08-05 13:10:14 +0000
+I, [2015-08-05T13:10:15.274385 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.274517 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.309680 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.309761 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.313896 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.313971 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.326759 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.326826 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.330817 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:10:15.330864 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.196.38.163 at 2015-08-05 13:10:15 +0000
+I, [2015-08-05T13:14:32.425426 #11192]  INFO -- : Started GET "/signin" for 54.157.246.47 at 2015-08-05 13:14:32 +0000
+I, [2015-08-05T13:14:32.425496 #11192]  INFO -- : Started GET "/signin" for 54.157.246.47 at 2015-08-05 13:14:32 +0000
+I, [2015-08-05T13:14:32.616485 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.157.246.47 at 2015-08-05 13:14:32 +0000
+I, [2015-08-05T13:14:32.618554 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 54.157.246.47 at 2015-08-05 13:14:32 +0000
+I, [2015-08-05T13:14:32.619920 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:14:32 +0000
+I, [2015-08-05T13:14:32.619976 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:14:32 +0000
+I, [2015-08-05T13:14:32.986501 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:14:32 +0000
+I, [2015-08-05T13:14:32.986577 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 54.157.246.47 at 2015-08-05 13:14:32 +0000
+I, [2015-08-05T13:14:33.474992 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.157.246.47 at 2015-08-05 13:14:33 +0000
+I, [2015-08-05T13:14:33.475066 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 54.157.246.47 at 2015-08-05 13:14:33 +0000
+I, [2015-08-05T13:14:33.691731 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.157.246.47 at 2015-08-05 13:14:33 +0000
+I, [2015-08-05T13:14:33.691814 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 54.157.246.47 at 2015-08-05 13:14:33 +0000
+I, [2015-08-05T13:14:34.092214 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.092298 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.113058 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.113656 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.117389 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.117486 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.125995 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.126070 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.132103 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:14:34.132153 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff" for 54.157.246.47 at 2015-08-05 13:14:34 +0000
+I, [2015-08-05T13:31:06.967296 #11192]  INFO -- : Started GET "/" for 180.76.15.155 at 2015-08-05 13:31:06 +0000
+I, [2015-08-05T13:31:06.967392 #11192]  INFO -- : Started GET "/" for 180.76.15.155 at 2015-08-05 13:31:06 +0000
+I, [2015-08-05T13:31:31.116395 #11192]  INFO -- : Started GET "/" for 180.76.15.19 at 2015-08-05 13:31:31 +0000
+I, [2015-08-05T13:31:31.116508 #11192]  INFO -- : Started GET "/" for 180.76.15.19 at 2015-08-05 13:31:31 +0000
+I, [2015-08-05T14:26:49.138693 #11192]  INFO -- : Started GET "/" for 180.76.15.16 at 2015-08-05 14:26:49 +0000
+I, [2015-08-05T14:26:49.138816 #11192]  INFO -- : Started GET "/" for 180.76.15.16 at 2015-08-05 14:26:49 +0000
+I, [2015-08-05T14:27:02.909482 #11192]  INFO -- : Started GET "/" for 180.76.15.136 at 2015-08-05 14:27:02 +0000
+I, [2015-08-05T14:27:02.909586 #11192]  INFO -- : Started GET "/" for 180.76.15.136 at 2015-08-05 14:27:02 +0000
+I, [2015-08-05T14:39:59.893498 #11192]  INFO -- : Started HEAD "/" for 45.55.169.64 at 2015-08-05 14:39:59 +0000
+I, [2015-08-05T14:39:59.893590 #11192]  INFO -- : Started HEAD "/" for 45.55.169.64 at 2015-08-05 14:39:59 +0000
+I, [2015-08-05T14:43:25.201149 #11192]  INFO -- : Started GET "/" for 185.92.73.99 at 2015-08-05 14:43:25 +0000
+I, [2015-08-05T14:43:25.201226 #11192]  INFO -- : Started GET "/" for 185.92.73.99 at 2015-08-05 14:43:25 +0000
+I, [2015-08-05T14:46:12.110189 #11192]  INFO -- : Started GET "/" for 52.8.242.198 at 2015-08-05 14:46:12 +0000
+I, [2015-08-05T14:46:12.110310 #11192]  INFO -- : Started GET "/" for 52.8.242.198 at 2015-08-05 14:46:12 +0000
+I, [2015-08-05T14:48:41.513001 #11192]  INFO -- : Started GET "/" for 104.197.123.159 at 2015-08-05 14:48:41 +0000
+I, [2015-08-05T14:48:41.513100 #11192]  INFO -- : Started GET "/" for 104.197.123.159 at 2015-08-05 14:48:41 +0000
+I, [2015-08-05T14:51:48.446750 #11192]  INFO -- : Started GET "/testproxy.php" for 192.187.110.98 at 2015-08-05 14:51:48 +0000
+I, [2015-08-05T14:51:48.446834 #11192]  INFO -- : Started GET "/testproxy.php" for 192.187.110.98 at 2015-08-05 14:51:48 +0000
+F, [2015-08-05T14:51:48.448069 #11192] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/testproxy.php"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+F, [2015-08-05T14:51:48.448153 #11192] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/testproxy.php"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-08-05T15:28:41.164673 #11192]  INFO -- : Started GET "/" for 180.76.15.25 at 2015-08-05 15:28:41 +0000
+I, [2015-08-05T15:28:41.164751 #11192]  INFO -- : Started GET "/" for 180.76.15.25 at 2015-08-05 15:28:41 +0000
+I, [2015-08-05T15:29:00.151412 #11192]  INFO -- : Started GET "/" for 180.76.15.32 at 2015-08-05 15:29:00 +0000
+I, [2015-08-05T15:29:00.151486 #11192]  INFO -- : Started GET "/" for 180.76.15.32 at 2015-08-05 15:29:00 +0000
+I, [2015-08-05T15:46:40.241004 #11192]  INFO -- : Started HEAD "/" for 104.131.117.29 at 2015-08-05 15:46:40 +0000
+I, [2015-08-05T15:46:40.241111 #11192]  INFO -- : Started HEAD "/" for 104.131.117.29 at 2015-08-05 15:46:40 +0000
+I, [2015-08-05T16:30:10.061533 #11192]  INFO -- : Started GET "/" for 180.76.15.7 at 2015-08-05 16:30:10 +0000
+I, [2015-08-05T16:30:10.061606 #11192]  INFO -- : Started GET "/" for 180.76.15.7 at 2015-08-05 16:30:10 +0000
+I, [2015-08-05T16:30:30.958322 #11192]  INFO -- : Started GET "/" for 180.76.15.33 at 2015-08-05 16:30:30 +0000
+I, [2015-08-05T16:30:30.958420 #11192]  INFO -- : Started GET "/" for 180.76.15.33 at 2015-08-05 16:30:30 +0000
+[2015-08-05 17:06:29] ERROR bad Request-Line `\x00'.
+[2015-08-05 17:06:29] ERROR bad URI `http://httpheader.net'.
+[2015-08-05 17:07:00] ERROR bad Request-Line `\x04\x01\x00PÀ\x03±ª0\x00'.
+[2015-08-05 17:07:30] ERROR bad Request-Line `\x05\x01\x00'.
+I, [2015-08-05T17:53:37.279455 #11192]  INFO -- : Started GET "/" for 180.76.15.28 at 2015-08-05 17:53:37 +0000
+I, [2015-08-05T17:53:37.279545 #11192]  INFO -- : Started GET "/" for 180.76.15.28 at 2015-08-05 17:53:37 +0000
+I, [2015-08-05T17:53:55.222286 #11192]  INFO -- : Started GET "/" for 180.76.15.163 at 2015-08-05 17:53:55 +0000
+I, [2015-08-05T17:53:55.222377 #11192]  INFO -- : Started GET "/" for 180.76.15.163 at 2015-08-05 17:53:55 +0000
+I, [2015-08-05T18:34:10.613187 #11192]  INFO -- : Started GET "/" for 180.76.15.12 at 2015-08-05 18:34:10 +0000
+I, [2015-08-05T18:34:10.613290 #11192]  INFO -- : Started GET "/" for 180.76.15.12 at 2015-08-05 18:34:10 +0000
+I, [2015-08-05T18:34:29.142503 #11192]  INFO -- : Started GET "/" for 180.76.15.155 at 2015-08-05 18:34:29 +0000
+I, [2015-08-05T18:34:29.142590 #11192]  INFO -- : Started GET "/" for 180.76.15.155 at 2015-08-05 18:34:29 +0000
+I, [2015-08-05T19:53:21.735406 #11192]  INFO -- : Started GET "/" for 180.76.15.27 at 2015-08-05 19:53:21 +0000
+I, [2015-08-05T19:53:21.735516 #11192]  INFO -- : Started GET "/" for 180.76.15.27 at 2015-08-05 19:53:21 +0000
+I, [2015-08-05T19:53:49.822337 #11192]  INFO -- : Started GET "/" for 180.76.15.32 at 2015-08-05 19:53:49 +0000
+I, [2015-08-05T19:53:49.822456 #11192]  INFO -- : Started GET "/" for 180.76.15.32 at 2015-08-05 19:53:49 +0000
+I, [2015-08-05T20:41:43.226735 #11192]  INFO -- : Started GET "/" for 180.76.15.5 at 2015-08-05 20:41:43 +0000
+I, [2015-08-05T20:41:43.226818 #11192]  INFO -- : Started GET "/" for 180.76.15.5 at 2015-08-05 20:41:43 +0000
+I, [2015-08-05T20:42:00.319191 #11192]  INFO -- : Started GET "/" for 180.76.15.27 at 2015-08-05 20:42:00 +0000
+I, [2015-08-05T20:42:00.319308 #11192]  INFO -- : Started GET "/" for 180.76.15.27 at 2015-08-05 20:42:00 +0000
+I, [2015-08-05T20:56:47.859465 #11192]  INFO -- : Started GET "/" for 52.19.45.13 at 2015-08-05 20:56:47 +0000
+I, [2015-08-05T20:56:47.859542 #11192]  INFO -- : Started GET "/" for 52.19.45.13 at 2015-08-05 20:56:47 +0000
+I, [2015-08-05T21:31:03.336653 #11192]  INFO -- : Started GET "/tmUnblock.cgi" for 170.72.1.26 at 2015-08-05 21:31:03 +0000
+I, [2015-08-05T21:31:03.336730 #11192]  INFO -- : Started GET "/tmUnblock.cgi" for 170.72.1.26 at 2015-08-05 21:31:03 +0000
+F, [2015-08-05T21:31:03.337852 #11192] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/tmUnblock.cgi"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+F, [2015-08-05T21:31:03.337897 #11192] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/tmUnblock.cgi"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[2015-08-05 21:31:03] ERROR Errno::ECONNRESET: Connection reset by peer
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `eof?'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `run'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+I, [2015-08-05T21:31:03.603869 #11192]  INFO -- : Started GET "/" for 170.72.1.26 at 2015-08-05 21:31:03 +0000
+I, [2015-08-05T21:31:03.603974 #11192]  INFO -- : Started GET "/" for 170.72.1.26 at 2015-08-05 21:31:03 +0000
+[2015-08-05 21:31:03] ERROR Errno::ECONNRESET: Connection reset by peer
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `eof?'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `run'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+I, [2015-08-05T21:34:55.016416 #11192]  INFO -- : Started GET "/" for 180.76.15.154 at 2015-08-05 21:34:55 +0000
+I, [2015-08-05T21:34:55.016506 #11192]  INFO -- : Started GET "/" for 180.76.15.154 at 2015-08-05 21:34:55 +0000
+I, [2015-08-05T21:35:25.463861 #11192]  INFO -- : Started GET "/" for 180.76.15.31 at 2015-08-05 21:35:25 +0000
+I, [2015-08-05T21:35:25.463948 #11192]  INFO -- : Started GET "/" for 180.76.15.31 at 2015-08-05 21:35:25 +0000
+I, [2015-08-05T22:29:13.045963 #11192]  INFO -- : Started GET "/" for 180.76.15.8 at 2015-08-05 22:29:13 +0000
+I, [2015-08-05T22:29:13.046071 #11192]  INFO -- : Started GET "/" for 180.76.15.8 at 2015-08-05 22:29:13 +0000
+I, [2015-08-05T22:29:28.099138 #11192]  INFO -- : Started GET "/" for 180.76.15.21 at 2015-08-05 22:29:28 +0000
+I, [2015-08-05T22:29:28.099225 #11192]  INFO -- : Started GET "/" for 180.76.15.21 at 2015-08-05 22:29:28 +0000
+I, [2015-08-05T22:58:55.422590 #11192]  INFO -- : Started GET "/" for 157.55.39.109 at 2015-08-05 22:58:55 +0000
+I, [2015-08-05T22:58:55.422681 #11192]  INFO -- : Started GET "/" for 157.55.39.109 at 2015-08-05 22:58:55 +0000
+I, [2015-08-05T23:31:49.699548 #11192]  INFO -- : Started GET "/" for 180.76.15.146 at 2015-08-05 23:31:49 +0000
+I, [2015-08-05T23:31:49.699648 #11192]  INFO -- : Started GET "/" for 180.76.15.146 at 2015-08-05 23:31:49 +0000
+I, [2015-08-05T23:32:16.723059 #11192]  INFO -- : Started GET "/" for 180.76.15.135 at 2015-08-05 23:32:16 +0000
+I, [2015-08-05T23:32:16.723129 #11192]  INFO -- : Started GET "/" for 180.76.15.135 at 2015-08-05 23:32:16 +0000
+I, [2015-08-06T00:14:38.514391 #11192]  INFO -- : Started GET "/" for 72.27.194.144 at 2015-08-06 00:14:38 +0000
+I, [2015-08-06T00:14:38.514461 #11192]  INFO -- : Started GET "/" for 72.27.194.144 at 2015-08-06 00:14:38 +0000
+I, [2015-08-06T00:14:39.326868 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 72.27.194.144 at 2015-08-06 00:14:39 +0000
+I, [2015-08-06T00:14:39.326957 #11192]  INFO -- : Started GET "/assets/jquery-5182834f212b7330b4f06f542cd9c148.js" for 72.27.194.144 at 2015-08-06 00:14:39 +0000
+I, [2015-08-06T00:14:39.368166 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 72.27.194.144 at 2015-08-06 00:14:39 +0000
+I, [2015-08-06T00:14:39.368237 #11192]  INFO -- : Started GET "/mathjax/MathJax.js?config=Accessible-full.js" for 72.27.194.144 at 2015-08-06 00:14:39 +0000
+I, [2015-08-06T00:14:43.093167 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.093252 #11192]  INFO -- : Started GET "/mathjax/config/Accessible-full.js" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.136094 #11192]  INFO -- : Started GET "/assets/backgroundPage.jpg" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.136158 #11192]  INFO -- : Started GET "/assets/backgroundPage.jpg" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.150935 #11192]  INFO -- : Started GET "/assets/sprite.png" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.151006 #11192]  INFO -- : Started GET "/assets/sprite.png" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.183864 #11192]  INFO -- : Started GET "/assets/pattern.png" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.183913 #11192]  INFO -- : Started GET "/assets/pattern.png" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.766187 #11192]  INFO -- : Started GET "/assets/topCenterRepeat.png" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:43.766362 #11192]  INFO -- : Started GET "/assets/topCenterRepeat.png" for 72.27.194.144 at 2015-08-06 00:14:43 +0000
+I, [2015-08-06T00:14:44.269460 #11192]  INFO -- : Started GET "/assets/ajax-loader-2.gif" for 72.27.194.144 at 2015-08-06 00:14:44 +0000
+I, [2015-08-06T00:14:44.269558 #11192]  INFO -- : Started GET "/assets/ajax-loader-2.gif" for 72.27.194.144 at 2015-08-06 00:14:44 +0000
+I, [2015-08-06T00:14:44.599861 #11192]  INFO -- : Started GET "/assets/bottomCenterRepeat.png" for 72.27.194.144 at 2015-08-06 00:14:44 +0000
+I, [2015-08-06T00:14:44.599926 #11192]  INFO -- : Started GET "/assets/bottomCenterRepeat.png" for 72.27.194.144 at 2015-08-06 00:14:44 +0000
+I, [2015-08-06T00:14:47.866439 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 72.27.194.144 at 2015-08-06 00:14:47 +0000
+I, [2015-08-06T00:14:47.866549 #11192]  INFO -- : Started GET "/mathjax/extensions/TeX/mhchem.js" for 72.27.194.144 at 2015-08-06 00:14:47 +0000
+I, [2015-08-06T00:14:47.912460 #11192]  INFO -- : Started GET "/mathjax/images/MenuArrow-15.png" for 72.27.194.144 at 2015-08-06 00:14:47 +0000
+I, [2015-08-06T00:14:47.912553 #11192]  INFO -- : Started GET "/mathjax/images/MenuArrow-15.png" for 72.27.194.144 at 2015-08-06 00:14:47 +0000
+I, [2015-08-06T00:14:47.953036 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 72.27.194.144 at 2015-08-06 00:14:47 +0000
+I, [2015-08-06T00:14:47.953108 #11192]  INFO -- : Started GET "/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js" for 72.27.194.144 at 2015-08-06 00:14:47 +0000
+I, [2015-08-06T00:14:49.241056 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.241192 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.302444 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.303798 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.308904 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.308952 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.310991 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.311067 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.313060 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:14:49.313126 #11192]  INFO -- : Started GET "/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf" for 72.27.194.144 at 2015-08-06 00:14:49 +0000
+I, [2015-08-06T00:15:52.694448 #11192]  INFO -- : Started GET "/" for 188.138.1.218 at 2015-08-06 00:15:52 +0000
+I, [2015-08-06T00:15:52.694542 #11192]  INFO -- : Started GET "/" for 188.138.1.218 at 2015-08-06 00:15:52 +0000
+I, [2015-08-06T00:15:53.631348 #11192]  INFO -- : Started GET "/sitemap.xml" for 188.138.1.218 at 2015-08-06 00:15:53 +0000
+I, [2015-08-06T00:15:53.631448 #11192]  INFO -- : Started GET "/sitemap.xml" for 188.138.1.218 at 2015-08-06 00:15:53 +0000
+F, [2015-08-06T00:15:53.633051 #11192] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sitemap.xml"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+F, [2015-08-06T00:15:53.633144 #11192] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sitemap.xml"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[2015-08-06 00:15:53] ERROR Errno::ECONNRESET: Connection reset by peer
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `eof?'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `run'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+I, [2015-08-06T00:29:43.000704 #11192]  INFO -- : Started GET "/" for 180.76.15.149 at 2015-08-06 00:29:43 +0000
+I, [2015-08-06T00:29:43.000773 #11192]  INFO -- : Started GET "/" for 180.76.15.149 at 2015-08-06 00:29:43 +0000
+I, [2015-08-06T00:30:04.273092 #11192]  INFO -- : Started GET "/" for 180.76.15.7 at 2015-08-06 00:30:04 +0000
+I, [2015-08-06T00:30:04.273199 #11192]  INFO -- : Started GET "/" for 180.76.15.7 at 2015-08-06 00:30:04 +0000
+I, [2015-08-06T01:00:18.563181 #11192]  INFO -- : Started GET "/subjects/chemistry" for 180.76.15.153 at 2015-08-06 01:00:18 +0000
+I, [2015-08-06T01:00:18.563255 #11192]  INFO -- : Started GET "/subjects/chemistry" for 180.76.15.153 at 2015-08-06 01:00:18 +0000
+I, [2015-08-06T01:00:19.154577 #11192]  INFO -- : Started GET "/signin" for 180.76.15.139 at 2015-08-06 01:00:19 +0000
+I, [2015-08-06T01:00:19.154643 #11192]  INFO -- : Started GET "/signin" for 180.76.15.139 at 2015-08-06 01:00:19 +0000
+I, [2015-08-06T01:29:49.833450 #11192]  INFO -- : Started GET "/w00tw00t.at.ISC.SANS.DFind:)" for 72.167.178.249 at 2015-08-06 01:29:49 +0000
+I, [2015-08-06T01:29:49.833570 #11192]  INFO -- : Started GET "/w00tw00t.at.ISC.SANS.DFind:)" for 72.167.178.249 at 2015-08-06 01:29:49 +0000
+F, [2015-08-06T01:29:49.835166 #11192] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/w00tw00t.at.ISC.SANS.DFind:)"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+F, [2015-08-06T01:29:49.835252 #11192] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/w00tw00t.at.ISC.SANS.DFind:)"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[2015-08-06 01:29:49] ERROR Errno::ECONNRESET: Connection reset by peer
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `eof?'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:80:in `run'
+	/usr/local/rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+I, [2015-08-06T01:34:21.244222 #11192]  INFO -- : Started GET "/" for 180.76.15.26 at 2015-08-06 01:34:21 +0000
+I, [2015-08-06T01:34:21.244325 #11192]  INFO -- : Started GET "/" for 180.76.15.26 at 2015-08-06 01:34:21 +0000
+I, [2015-08-06T01:34:48.770639 #11192]  INFO -- : Started GET "/" for 180.76.15.19 at 2015-08-06 01:34:48 +0000
+I, [2015-08-06T01:34:48.770727 #11192]  INFO -- : Started GET "/" for 180.76.15.19 at 2015-08-06 01:34:48 +0000
+I, [2015-08-06T01:53:50.299094 #11192]  INFO -- : Started GET "/" for 91.7.221.7 at 2015-08-06 01:53:50 +0000
+I, [2015-08-06T01:53:50.299223 #11192]  INFO -- : Started GET "/" for 91.7.221.7 at 2015-08-06 01:53:50 +0000

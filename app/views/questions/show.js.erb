@@ -1,0 +1,6 @@
+
+<% if @which.eql? "test"%>
+  $("#questions_div").html("<%= escape_javascript(render(:partial => 'test', :object => @question)) %>");
+<% else %>
+  $("#questions_div").html("<%= escape_javascript(render(:partial => 'question', :object => @question)) %>");
+<% end %>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-au" lang="en-au">
+<head>
+<title>242chalkboard</title>
+<script language="javascript" src="js/html5.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" href="css/fancySelect.css" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<div class="wrapper">
+  <div class="pattern"></div>
+  <div class="top">
+    <div class="topcenter">
+      <div class="topLeft">
+        <div class="topRight"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <div class="centerRight">
+      <header>
+        <nav> <a href="#" title="Chalk Board" rel="Chalk Board" class="logo"></a> <a href="#" title="Contact" rel="contactPopup" class="call popup"></a>
+          <div class="whitePopUp contactPopup"> <span class="arrow"></span>
+            <p>
+              <label>Name:</label>
+              <input type="text" value="Test Name" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p>
+              <label>Email:</label>
+              <input type="text" value="example@gmail.com" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <textarea></textarea>
+            <p class="btnPanel"><a href="#" class="yallowBtn">Send</a><a href="#" class="grayBtn">Reset</a></p>
+          </div>
+          <a href="#" title="Help" rel="socialPopup" class="hand popup"></a>
+          <div class="whitePopUp socialPopup"> <span class="arrow"></span>
+            <p><span count="100"></span>
+              <input type="image" src="images/tweet.jpg" alt="Twitter" title="Twitter" />
+            </p>
+            <p><span count="80"></span>
+              <input type="image" src="images/facebook.jpg" alt="FaceBook" title="FaceBook" />
+            </p>
+            <p><span count="345"></span>
+              <input type="image" src="images/googleP.jpg" alt="Google Plus" title="Google Plus" />
+            </p>
+          </div>
+          <a href="#" title="Profile" rel="profilePopUp" class="profile popup active"></a>
+          <div class="whitePopUp profilePopUp"> <span class="arrow"></span> <a href="#" rel="View / Edit profile" class="editProfile"><span></span>
+            <label>View / Edit profile</label>
+            </a> <a href="#" rel="sign out" class="signout"><span></span>
+            <label>sign out</label>
+            </a> </div>
+          <a href="#" title="Files" rel="loginPopup" class="in popup"></a>
+          <div class="whitePopUp loginPopup"> <span class="arrow"></span>
+            <p>
+              <label>User Name :</label>
+              <input type="text" value="example@gmail.com" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p>
+              <label>Password :</label>
+              <input type="password" class="i1" value="*********" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p class="btnPanel"><a href="#" class="yallowBtn" rel="Log In">Log In</a></p>
+            <p class="centerText"><a class="forgetP" href="#" rel="Forget Passsword">Forget Passsword?</a></p>
+          </div>
+          <a href="#" title="Invite" class="add"></a>
+          <div class="whitePopUp invitePopUp"> <span class="arrow"></span>
+            <p>
+              <label>Nick Name :</label>
+              <input type="text" value="bright 12" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(one word withoutspace)</span></p>
+            <p>
+              <label>User Name :</label>
+              <input type="text" value="example@gmail.com" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p>
+              <label>Password :</label>
+              <input type="password" class="i1" value="*********" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p>
+              <label>Reenter Password :</label>
+              <input type="password" value="*********" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p class="customRadio">
+              <label></label>
+              <span><b class="checked"></b>
+              <input type="radio" checked="checked" name="inviteRadio" />
+              BJS</span><span><b></b>
+              <input type="radio" name="inviteRadio" />
+              BGCSE</span></p>
+            <p class="btnPanel"><a href="#" class="yallowBtn">Submit</a></p>
+          </div>
+          <div class="whitePopUp subjectsPopUp"> <span class="arrow"></span> <a href="#" class="eng"><span></span>
+            <label>ENGLISH</label>
+            </a> <a href="#" class="bio"><span></span>
+            <label>Biology</label>
+            </a> <a href="#" class="chm"><span></span>
+            <label>Chemistry</label>
+            </a> <a href="#" class="math"><span></span>
+            <label>Mathematics</label>
+            </a> <a href="#" class="phy"><span></span>
+            <label>Physics</label>
+            </a> </div>
+          <a href="#" title="Subjects" rel="subjectsPopUp" class="subject popup">Subjects</a> <a title="View & edit profile" class="viewEditProfile active">View & edit profile</a> <a href="#" title="Report Card" rel="reportCardPopUp" class="reportCard popup">Report card</a>
+          <div class="whitePopUp reportCardPopUp"> <span class="arrow"></span> <a href="#" rel="quick reports" title="Quick Reports" class="quickReports"><span></span>
+            <label>quick reports</label>
+            </a> <a rel="module reports" href="#" class="moduleReports" title="Module Reports"><span></span>
+            <label>module reports</label>
+            </a> <a rel="test reports" href="#" class="testReports" title="Test Reports"><span></span>
+            <label>test reports</label>
+            </a> </div>
+          <span class="username semiBold">User Name</span> </nav>
+      </header>
+      <div class="popUpConfirm">
+        <h5>Are you sure</h5>
+        <div class="buttonsPopup"><a href="#" class="yesIDo" rel="Yes" title="Yes I do">Yes I do</a> <a href="#" class="GoBack" title="Go Back">No</a></div>
+      </div>
+      <section class="profile">
+        <div class="dTab"></div>
+        <h2>This is You!</h2>
+        <p class="centerText">(You can change the information right here and click on “Commit Change” to update your profile.) </p>
+        <form class="profileData">
+          <div class="formRow">
+            <label>Your Mode </label>
+            <span class="dividerFormCol">:</span>
+            <div class="secondColForm">
+              <div class="progressBarBox">
+                <div class="pb">
+                  <div class="progressBar yellowBar">
+                    <div class="prograssBarCode">
+                      <div class="subMarksP"></div>
+                      <div class="MarksP red" style="width:50px;"></div>
+                      <img src="images/progress.png" /> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="formRow">
+            <label>e-mail </label>
+            <span class="dividerFormCol">: &nbsp;</span>
+            <div class="secondColForm yellow">example@gmail.com</div>
+            <div class="cBoth"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label>First Name </label>
+            <span><span class="dividerFormCol">:</span></span>
+            <div class="secondColForm">
+              <input type="text" value="Nio">
+            </div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label>Last Name </label>
+            <span class="dividerFormCol">:</span>
+            <div class="secondColForm">
+              <input type="text" value="Agrawal">
+            </div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label>Age </label>
+            <span class="dividerFormCol">:</span>
+            <div class="secondColForm small">
+              <select>
+                <option>test</option>
+              </select>
+              <img src="images/customSelect_small.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label>School </label>
+            <span class="dividerFormCol">:</span>
+            <div class="secondColForm">
+              <select>
+                <option>14 Year</option>
+                <option>16 Year</option>
+              </select>
+              <img src="images/customSelect.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label>Grade </label>
+            <span class="dividerFormCol">:</span>
+            <div class="secondColForm small">
+              <select>
+                <option>A</option>
+                <option>A +</option>
+              </select>
+              <img src="images/customSelect_small.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label>Island </label>
+            <span class="dividerFormCol">:</span>
+            <div class="secondColForm">
+              <select>
+                <option>India</option>
+                <option>US</option>
+              </select>
+              <img src="images/customSelect.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label>New Password </label>
+            <span class="dividerFormCol">:</span>
+            <div class="secondColForm">
+              <input type="password" value="123456">
+            </div>
+            <p class="errorMsg">(Error message here...)</p>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label>Re-Enter </label>
+            <span class="dividerFormCol">:</span>
+            <div class="secondColForm">
+              <input type="password"  value="123453">
+            </div>
+            <p class="errorMsg">(Error message here...)</p>
+            <div class="cBoth"></div>
+          </div>
+          <div class="btn"><a href="#" class="commitChanges" title="Commit Change" rel="Commit Change">Commit Change</a></div>
+        </form>
+      </section>
+      <footer><a href="terms" rel="Terms and Conditions" title="Terms and Conditions">T & C</a> | <a href="#" rel="Privacy policy" title="Privacy policy">Privacy policy</a> |242 Chalk Board © 2013</footer>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bottomcenter">
+      <div class="bottomLeft">
+        <div class="bottomRight"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script language="javascript" src="js/jquery.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script language="javascript" src="js/script.js"></script>
+<script language="javascript" src="js/fancySelect.js"></script>
+</body>
+</html>
+</strong>
+</h6>

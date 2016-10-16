@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-au" lang="en-au">
+    <head>
+    <%= metamagic :title => "242Chalkboard", :description => "BGCSE application for Bahamas", :keywords => %w(bgcse bjc bahamas test exams) %><%= stylesheet_link_tag "/design/css/style.css" %><%= stylesheet_link_tag "/design/css/jquery.mCustomScrollbar.css" %><%= javascript_include_tag "https://js.stripe.com/v1/", "application" %><%= javascript_include_tag "/design/js/html5.js" %><%= javascript_include_tag "/design/js/jquery.timer.js" %><%= javascript_include_tag "/design/js/demo.js" %>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <%#= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %><%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %><%= javascript_include_tag "application", "data-turbolinks-track" => true %><%= javascript_include_tag 'jquery', 'application', "data-turbolinks-track" => true%><%= csrf_meta_tags %><%= render 'layouts/shim' %>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX","output/HTML-CSS"],
+      TeX: {extensions: ["mhchem.js"]},
+      tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+    });
+    </script>
+    <%#= mathjax_tag %><%= mathjax_tag :config=>'Accessible-full.js' %>
+<meta name="google-site-verification" content="PiBd4y3lQw_jU1QysiyGbdjBx4541E_W3zvXClg1cr4" />
+    </head>
+    <body>
+    <input type='text' hidden id="userState" name= 'user_state' value = '<%= signed_in? %>' />
+	<a class="logo mobileNavLogo" rel="242Chalkboard" title="242Chalkboard" href="http://242chalkboard.com/"></a>
+	<% if signed_in? %>
+	<div class="userNameMobile"><%= current_student.nickname %></div>
+	<% end %>
+    <div class="mobileNav"> <a class="mob" onclick="openNavMob()"></a>
+      <ul>
+        <li><a class="add index-home" title="Home" href="#">Home</a></li>
+		
+        <li class="userLogInState"><a class="home popup" rel="invitePopUp" title="Sign Up" href="/signup">Sign Up</a></li>
+        <li class="userLogInState"><a class="in popup" rel="loginPopup" title="Log In" href="/signin">Log In</a></li>
+		
+		<% if signed_in? %>
+		<li class="userLogOutState profileE"><a class="in popup" title="Log In" href="<%=edit_student_path(current_student)%>">Edit Profile</a></li>
+        <li class="userLogOutState"><a class="in popup" rel="loginPopup" title="Log In" href="/signout">Log Out</a></li>
+		<% end %>
+        <li class="dropdownMob openNavMob1"><a class="sub" onclick="openNavMob1()">Subjects</a>
+          <ul>
+            <li><a class="math openReportPopup" href="/subjects/mathematics" title="Mathematics" rel="Mathematics">Mathematics</a></li>
+            <li><a class="bio openReportPopup" href="/subjects/physics" title="Biology" rel="Biology">Biology</a></li>
+            <li><a class="chm openReportPopup" href="/subjects/chemistry" title="Chemistry" rel="Chemistry">Chemistry</a></li>
+            <li><a class="phy openReportPopup" href="/subjects/biology" title="Physics" rel="Physics">Physics</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdownMob openNavMob3"><a class="sub" onclick="openNavMob3()">Classrooms</a>
+          <ul>
+            <li><a class="math openReportPopup" href="/classrooms/mathematics" title="Mathematics" rel="Mathematics">Mathematics</a></li>
+            <li><a class="bio openReportPopup" href="/classrooms/physics" title="Biology" rel="Biology">Biology</a></li>
+            <li><a class="chm openReportPopup" href="/classrooms/chemistry" title="Chemistry" rel="Chemistry">Chemistry</a></li>
+            <li><a class="phy openReportPopup" href="/classrooms/biology" title="Physics" rel="Physics">Physics</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdownMob openNavMob2"><a class="sub" onclick="openNavMob2()">Report Card</a>
+          <ul>
+            <li><a class="open_popup " title="Quick Reports" rel="quick reports" href="/report/module">module reports</a></li>
+            <li><a class="open_popup" title="Quick Reports" rel="quick reports" href="/report/test">test reports</a></li>
+          </ul>
+        </li>
+        <li><a class="call popup" rel="contactPopup" title="Contact" href="mailto:tutor@242chalkboard.com">Contact Us</a></li>
+      </ul>
+    
+    </div>
+    <div class="wrapper">
+      <div class="pattern"></div>
+      <div class="top">
+        <div class="topcenter">
+          <div class="topLeft">
+            <div class="topRight"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <div class="centerRight"> <%= render 'layouts/header' %>
+          <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>">
+            <div class="subscription_error">
+              <h5> <%= value %> </h5>
+              <div class="buttonsPopup"> <a href="#" class="GoBack" title="Go Back">Ok</a> </div>
+            </div>
+          </div>
+          <% end %>
+          <%= yield %> <%= render 'layouts/footer' %> </div>
+      </div>
+      <div class="loading">
+        <img src = "/assets/ajax-loader-2.gif" /> </div>
+      <div class="bottom">
+        <div class="bottomcenter">
+          <div class="bottomLeft">
+            <div class="bottomRight"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% Stripe.api_key = 'sk_test_eF8hJIisVZ1FiKfSVpRLoVce' %>
+    <%= javascript_include_tag "/design/js/jquery.min.js" %> <%= javascript_include_tag "/design/js/script.js" %> <%= javascript_include_tag "/design/js/fancySelect.js" %> <%= javascript_include_tag "/design/js/jquery.mCustomScrollbar.concat.min.js"%> 
+    <!-- <script type='text/javascript'>alert(<%= signed_in? %>);</script> -->
+</body>
+</html>

@@ -1,0 +1,8 @@
+$(".subscription_error h5").css({"font-size":"30px", "line-height":"32px"});
+$(".subscription_error h5").html("<%= @error %>");
+$(".subscription_error").css("display", "block");
+
+<% if !@subs.nil? %>
+	<% @subs.save %>
+	window.location = "/subjects/<%= @subs.subject %>"
+<% end %>

@@ -1,0 +1,351 @@
+
+<header>
+  <nav>
+    
+    <a href="#" title="242Chalkboard" rel="242Chalkboard" class="logo"></a>
+    <a href="#" title="Contact" rel="contactPopup" class="call popup"></a> 
+    <a href="#" title="242Chalkboard" rel="242Chalkboard" class="logo"></a>
+
+    <a href="#" title="Contact" rel="contactPopup" class="call popup"></a>
+
+    <div class="whitePopUp contactPopup">
+      <span class="arrow"></span>
+      <%= form_tag static_pages_contact_path  ,:class => "Contact" ,:remote=>true, :authenticity_token => true,:method=>"POST" do %>
+        <div id="contact-error" style="color:red;color:red;font-size:13px;font-weight: bold;"></div>
+        <p>
+          <label style="text-align:right;">Name</label>
+          <%= text_field_tag "name" ,nil,:placeholder=>"student"%>
+        </p>
+        <p class="label">
+          <label></label>
+          <span>enter name</span>
+        </p>
+        <p>
+          <label style="text-align:right;">Email</label>
+          <%= text_field_tag "email" ,nil,:placeholder=>"student@242chalkboard.com"%>
+        </p>
+        <p class="label">
+          <label></label>
+          <span>enter email</span>
+        </p>
+        <%= text_area_tag "message" %>  
+        <p class="btnPanel">
+          <%= link_to 'Send', "#",:class=>"yallowBtn contact_message" %>
+          <a href="#" class="grayBtn reset">Reset</a>
+        </p>
+      <% end %>
+    </div>
+
+    <!-- whitePopUp contactPopup -->
+
+    <a href="#" title="Help" rel="helpPopUp" class="hand popup"></a>
+    <div class="whitePopUp profilePopup">
+      <span class="arrow"></span>
+
+        <a href="<%=edit_student_path(current_student)%>" rel="View / Edit profile" class="editProfile">
+          <span></span>
+          <label>View / Edit profile</label>
+        </a>
+
+    </div>
+
+    <!-- whitePopUp socialPopup -->
+
+
+    <a href= "#" title="Home" class="add index-home"></a>
+    
+    <% if signed_in? %>
+      <a href= "<%= signout_path %>" title="Log Out" rel="nofollow" class="in popup"></a>
+      <a href="#" title="Profile" rel="profilePopUp" class="profile popup active"></a>
+      <div class="whitePopUp profilePopUp">
+        <span class="arrow"></span>
+        <a href="<%=edit_student_path(current_student)%>" rel="View / Edit profile" class="editProfile">
+          <span></span>
+          <label>View / Edit profile</label>
+        </a> 
+      </div>
+      <!-- whitePopUp profilePopUp -->
+    <% else %>
+      <a href="#" title="Log In" rel="loginPopup" class="in popup"></a>
+      <a href="#" title="Sign Up" rel="invitePopUp" class="home popup"></a>
+      <div class="whitePopUp loginPopup"> 
+        <span class="arrow"></span>
+        <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+        <%= form_for(:session, :html => {:class => "signin"}, :remote=>true ) do |f| %>
+          <div id="login-error" style="color:red;color:red;font-size:13px;font-weight: bold;"></div>
+         
+          <p>
+            <%= f.label :"Username:", "Email",:style=>"text-align: right;margin-left: -16px;"%>
+            <%=text_field_tag "session[email]",nil,:placeholder=>'student@242chalkboard.com',:style=>"margin-left: 17px;"%>
+          </p>
+          <p class="label">
+            <label></label>
+            <span>enter email</span>
+          </p>
+          <p>
+            <%= f.label :"Password",:style=>"text-align: right;margin-left: -16px; "  %>
+            <%= f.password_field :password, class: "i1", placeholder: "********",:style=>"margin-left: 17px;" %>
+          </p>
+          <%=hidden_field "sign_in","signin"%>
+          <p class="label">
+            <label></label>
+            <span>enter password</span>
+          </p>
+          <p class="btnPanel"><a href="#" class="yallowBtn signin_path" rel="Log In">Log In</a></p>
+
+          <p class="centerText">
+            <a class="forgetP in popup" rel="forgot_password" href="#" title="Forget Passsword?" style="width: 151px;">Forget Passsword?</a>
+          </p>
+        <% end %>
+      </div>
+      <!-- whitePopUp loginPopup -->
+
+      <div class="popUpConfirm">
+        <h5 style="padding: 0px !important;">Click on the confirmation link in the email to complete your sign up.</h5>
+        <div class="buttonsPopup"><a href="#" class="yesIDo" rel="Yes I do" title="Yes I do">Submit</a> </div>
+      </div>
+    
+      <div class="whitePopUp invitePopUp"> <span class="arrow"></span>
+        <% if !@student.nil? %>
+          <%= form_for(@student, :html => {:class => "signup"} ) do |f| %>
+            <div id="signup-error" style="color:red;color:red;font-size:13px;font-weight: bold;"></div>
+            <p>
+              <label style="text-align: right; margin-left: -14px;" >Email</label>
+              <%= f.email_field :email, class: "i1" , placeholder: "student@242chalkboard.com", :style=>"margin-left: 17px;" %>
+            </p>
+            <p class="label">
+              <label ></label>
+              <span>enter email</span></p>
+            <p>
+              <label style="text-align: right; margin-left: -14px;">Password</label>
+              <%= f.password_field :password, class: "i1", placeholder: "********",:style=>"margin-left: 17px;" %>
+            </p>
+            <p class="label">
+              <label></label>
+              <span>enter password</span></p>
+            <p>
+              <label style="text-align: right; margin-left: -14px;">Confirmation</label>
+              <%= f.password_field :password_confirmation, class: "i1", placeholder: "********",:style=>"margin-left: 17px;" %>
+            </p>
+            <p class="label">
+              <label style="text-align:right; margin-left: 3px;"></label>
+              <span>reenter password</span>
+            </p>
+            <p class="customRadio">
+              <label></label>
+              <span>
+                <b class="checked"></b>
+                <input type="radio" checked="checked" name="inviteRadio" />
+                BGCSE
+              </span>
+              
+            </p>
+            <p class="btnPanel"><a href="#" class="yallowBtn signup_path">Submit</a>  <a href="#" class="grayBtn reset reset_signup">Reset</a>
+            </p>
+
+          <% end %>
+        <% end %>
+      </div>
+      <!-- whitePopUp invitePopUp -->
+    <% end %>
+
+    <div class="whitePopUp forgot_password" style="margin-left: 34%; margin-top: 6%;"> 
+      <%= form_tag reset_password_path,:class => "forget_password" do %>
+        <div id="reset-error" style="color:red;color:red;font-size:13px;font-weight: bold;"></div>
+        <p> 
+          <%=label_tag :"Email", "Email ",:style=>"text-align: right;" %>
+          <%=text_field_tag :email,nil,:placeholder=>"student@242chalkboard.com"%>  
+        </p> 
+        <p class="label">
+          <label></label>
+          <span>enter email</span>
+        </p>
+        <br/>            
+        <p class="btnPanel"><a href="#" class="yallowBtn forgot_path">Send</a> </p>  
+      <% end %>
+    </div>  
+    <!-- whitePopUp forgot_password -->
+
+    <%if params[:id]=="forget_password"%>
+      <div class="popUpConfirmForget">
+        <h5 >You will receive a link to reset your password in your email.</h5>
+        <div class="buttonsPopup"><a href="#" class="yesIDo" rel="Yes I do" title="Yes I do">Submit</a> </div>
+      </div>
+    <%end%>  
+
+    <%if params[:note]=="reset password"%>
+      <div class="popUpConfirmForget">
+        <h5 style="padding: 28px !important;">Your password has been changed successfully.</h5>
+        <div class="buttonsPopup"><a href="#" class="yesIDo" rel="Yes I do" title="Yes I do">Submit</a> </div>
+      </div>
+    <%end%>  
+   
+   <div class="whitePopUp helpPopUp"> <span class="arrow"></span>
+      <% if signed_in?%>
+        <a rel="Mathematics" title="Mathematics" href="/classrooms/mathematics" class="math"><span></span>
+          <label>Math Class</label>
+        </a> <a rel="Biology" title="Biology" href="/classrooms/biology" class="bio"><span></span>
+          <label>Bio Class</label>
+        </a> <a rel="Chemistry" title="Chemistry" href="/classrooms/chemistry" class="chm"><span></span>
+          <label>Chem Class</label>
+        </a> <a rel="Physics" title="Physics" href="/classrooms/physics" class="phy"><span></span>
+          <label>Phys Class</label>
+        </a>  
+      <% else%>
+        <a rel="Mathematics Tutoring" title="Mathematics" href="#" class="math openReportPopup"><span></span>
+          <label>Math Class</label>
+        </a><a rel="Biology"  title="Biology" href="#" class="bio openReportPopup"><span></span>
+          <label>Bio Class</label>
+        </a> <a rel="Chemistry" title="Chemistry" href="#" class="chm openReportPopup"><span></span>
+          <label>Chem Class</label>
+        </a> <a rel="Physics" title="Physics" href="#" class="phy openReportPopup"><span></span>
+          <label>Phys Class</label>
+        </a>  
+      <% end %>
+    </div>
+	
+    <div class="whitePopUp subjectsPopUp"> <span class="arrow"></span>
+      <% if signed_in?%>
+        <a rel="Mathematics" title="Mathematics" href="/subjects/mathematics" class="math"><span></span>
+          <label>Mathematics</label>
+        </a> <a rel="Biology" title="Biology" href="/subjects/biology" class="bio"><span></span>
+          <label>Biology</label>
+        </a> <a rel="Chemistry" title="Chemistry" href="/subjects/chemistry" class="chm"><span></span>
+          <label>Chemistry</label>
+        </a> <a rel="Physics" title="Physics" href="/subjects/physics" class="phy"><span></span>
+          <label>Physics</label>
+        </a>  
+      <% else%>
+        <a rel="Mathematics" title="Mathematics" href="#" class="math openReportPopup"><span></span>
+          <label>Mathematics</label>
+        </a><a rel="Biology"  title="Biology" href="#" class="bio openReportPopup"><span></span>
+          <label>Biology</label>
+        </a> <a rel="Chemistry" title="Chemistry" href="#" class="chm openReportPopup"><span></span>
+          <label>Chemistry</label>
+        </a> <a rel="Physics" title="Physics" href="#" class="phy openReportPopup"><span></span>
+          <label>Physics</label>
+        </a>  
+      <% end %>
+    </div>
+   
+    <!-- whitePopUp subjectsPopUp -->
+    <a href="#" title="Subjects" rel="subjectsPopUp" class="subject popup">Subjects</a>
+
+    <% if params[:controller] == "subscriptions" %>
+      <a class="homeBottom active" style="background: url('/assets/sprite.png') no-repeat scroll -407px -21px transparent !important; width: 40px ! important; margin-left: -19px ! important;">
+        <p style="margin-left: -41px;">Subscription</p>
+      </a>
+    <%elsif params[:controller] == "reports" && params[:action]=="test_index"%>
+      <a class="homeBottom active module_reports" style="margin-left: -125px; width: 12%; margin-bottom: -12px; background: url('/assets/sprite_1.png') no-repeat scroll -774px -243px transparent;">
+        <p style="margin-left: 51px; width: 100%; margin-top: -11px;">Test Reports</p>
+      </a>
+    <%elsif params[:controller] == "reports" && params[:action]=="module_index"%>
+      <a class="homeBottom active module_header">       
+        Module Reports
+      </a>
+     
+    <% elsif params[:controller] == "students" && params[:action]=="edit" %>
+
+      <a class="homeBottom active profile-sheet" style="background: url('/assets/sprite_1.png') no-repeat scroll -379px -73px transparent !important">Profile</a>
+    <% elsif params[:controller] == "questions" %>
+	<% if params[:subject] == "mathematics" %>
+		<a class="homeBottom active module_math"><%=params[:module_test_name]%></a>
+	<%elsif params[:subject] == "biology"%>
+		<a class="homeBottom active module_bio"><%=params[:module_test_name]%></a>
+        <%elsif params[:subject] == "physics"%>
+                <a class="homeBottom active module_phys"><%=params[:module_test_name]%></a>
+        <%elsif params[:subject] == "chemistry"%>
+                <a class="homeBottom active module_chem"><%=params[:module_test_name]%></a>
+        <%else %>
+                <a class="homeBottom active"><%=params[:module_test_name]%></a>
+	<%end%>
+    <% elsif params[:controller] == "subjects" %>
+      <%if  params[:subject] =="mathematics" %>
+        <a class="homeBottom active module_math"><%= params[:subject]%></a>
+        <%elsif params[:subject] == "biology"%>
+                <a class="homeBottom active module_bio"><%=params[:subject]%></a>
+        <%elsif params[:subject] == "physics"%>
+                <a class="homeBottom active module_phys"><%=params[:subject]%></a>
+        <%elsif params[:subject] == "chemistry"%>
+                <a class="homeBottom active module_chem"><%=params[:subject]%></a>
+      <% else %>
+        <a class="homeBottom active" style="background-position: -761px -181px !important; margin-left: -42px !important; width:69px !important;"><%= params[:subject]%></a>
+      <% end %>
+    <%else%>
+      <a class="homeBottom active">Home</a>
+    <% end %>
+  
+    <div class="GoToSignin" style="display:none">
+      <h5>You must be logged in to access this page. </h5>
+      <div class="buttonsPopup"><a href="#" class="GoBack" id="notSignIn">Ok</a></div>
+    </div>
+
+	
+	
+    <div class="subjectPopup" style="display:none">
+      <h5>Coming Soon</h5>
+      <div class="buttonsPopup"><%=link_to "Ok","#",:id=>"subject_popup"%></div>
+    </div>        
+
+    <a href="#" title="Report Card" rel="reportCardPopUp" class="reportCard popup">Report card</a>
+
+    <div class="whitePopUp reportCardPopUp">
+      <span class="arrow"></span>
+        <% if signed_in?%>
+          <a href="<%= report_module_path %>" rel="quick reports" title="Module Reports" class="quickReports ">
+            <span style="background-position: -953px -122px; margin-left: -2px;"></span>
+            <label>module reports</label>
+          </a>
+          <a href="<%= report_test_path %>" rel="quick reports" title="Test Reports" class="quickReports"><span span style="margin-left: -9px; background-position: -949px -244px;"></span>
+            <label>test reports</label>
+          </a>
+        <% else%>
+          <a href="#" rel="quick reports" title="Quick Reports" class="open_popup "><span style="background-position: -953px -122px; margin-left: -9px;"></span>
+            <label style="margin-left: -3px;">module reports</label>
+          </a>
+          <a href="#" rel="quick reports" title="Quick Reports" class="open_popup"><span style="margin-left: -9px; background-position: -949px -244px;"></span>
+            <label>test reports</label>
+          </a>
+        <% end %>
+    </div>
+      <!-- whitePopUp reportCardPopUp -->
+
+    
+    <% current_uri = request.env['PATH_INFO'] %>
+    <% current_uri = URI.decode(current_uri)%>
+    <%if current_uri.start_with?("/subjects")%>
+      <%breadcrumb = "HOME" + current_uri.gsub("/"," :: ")%>
+      <% if breadcrumb.ends_with?("module") || breadcrumb.ends_with?("test")%>
+        <% breadcrumb = breadcrumb + "s"%>
+      <% end %>
+    <% elsif current_uri.start_with?("/report")%>
+      <% breadcrumb = "HOME" + current_uri.gsub("/"," :: ").gsub("report","report card") + " REPORTS"%>
+
+    <% elsif current_uri.start_with?("/students")%>
+      <% breadcrumb = "HOME" + " :: students :: " + "edit profile" %>
+
+    <% elsif current_uri.start_with?("/subscriptions")%>
+      <% breadcrumb = "HOME" + current_uri.gsub("/"," :: ") + " subscription"%>
+
+    <% elsif current_uri.start_with?("/classrooms")%>
+      <% breadcrumb = "HOME" + current_uri.gsub("/"," :: ") + " classroom"%>
+
+    <% elsif current_uri.start_with?("/questions")%>
+      <% breadcrumb = "HOME" + current_uri.gsub("/"," :: ").gsub("questions","subjects")[0..-5] %>
+
+    <%else%>
+      <% breadcrumb = " " %>
+    <% end %>
+    <% breadcrumb = breadcrumb.upcase %>
+    <span class = "breadcrumbs semiBold"><%= breadcrumb %></span>
+    <% if signed_in? %>
+      <span class="username semiBold"><%= current_student.nickname %></span>
+      <span class = "profileMessage semiBold"><%= profile() %></span>
+    <% end %>
+
+  </nav>
+</header>
+
+

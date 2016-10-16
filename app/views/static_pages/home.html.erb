@@ -1,0 +1,29 @@
+<%#= javascript_include_tag "/design/js/script.js"%>
+  
+<section>
+<div class="leftSection"> <img src="/design/images/map.png" class="map" title="Map" alt="Map" />
+<article class="aboutUs">
+  <div class="yellowTextTitle caps">About Us</div>
+  <div class="caps">242Chalkboard is an educational platform for BGCSE test preparation.  At 242Chalkboard we maximize the success of the Bahamian student by leveraging technology to prepare them to be game changers of tomorrow.  All of the sites resources are available to all students to facilitate their preparation for their upcoming examinations.  Our solutions serve all Bahamian students from Grand Bahama to Inagua.</div>
+</article>
+</div>
+<div class="rightSection">
+<h1 style="color:white;">You really CAN do whatever you WANT.</h1>
+<h2>Take your BGCSE with Confidence.</h2>
+<div class="benifits">
+  <div class="examPappers" rel="PAST EXAM PAPERS">PAST EXAM PAPERS</div>
+  <div class="improveGrades" rel="Improve grades">Improve grades</div>
+  <div class="available" rel="Available 24/7">Available 24/7</div>
+  <% if !signed_in?%>
+  	<p class="signupBtn" ><a href="#" title="Sign Up"  rel="invitePopUp" class="home popup"></a></p>
+ <%else%> 	
+ <p class="signupBtnChrome" ></p>
+  <%end%>	
+  
+  <p class="cBoth"></p>
+</div>
+<div class="cBoth"></div>
+<div class="yellowTextTitle size15">What’s Special about 242Chalkboard?</div>
+<div class="caps size15">242Chalkboard is the most comprehensive collection of BGCSE study resources on the web offering practice modules and exams with step by step solutions to help you succeed on your BGCSE exam!  Our extensive core and extended papers in a convenient easy to follow "study guide" format presents a comprehensive overview of the topics involved in the BGCSE.  Our database of past examinations is continually expanding, keeping you up-to-date on the latest BGCSE testing.</div>
+</div>
+</section>

@@ -1,0 +1,10 @@
+ <div class="pie EN <%= chart_180(pie_chart_degree((@module_stats["complete_percent_module"]))) %>" id="pieChart">
+
+                      <div class="pieContainer">
+                        <div class="pieBackground"></div>
+                        <div id="pieSlice1" class="hold">
+ <% chart_draw = pie_chart_degree(pie_chart_round((@module_stats["complete_percent_module"]))).to_s+"deg" %>
+ <div class="pieCircle pieChartCircle" style="-webkit-transform:rotate(<%=chart_draw%>);-moz-transform:rotate(<%=chart_draw%>);-o-transform:rotate(<%=chart_draw%>);transform:rotate(<%=chart_draw%>);"></div>
+   </div>
+  </div>
+</div>

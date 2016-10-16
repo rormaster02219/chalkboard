@@ -1,0 +1,40 @@
+
+<% if @student && @student.authenticate(params[:session][:password]) %>
+  <% if @student.active == true %>
+    setTimeout(function(){
+      <% sign_in_user @student %>
+      $(".login-error").empty();
+      window.location.href="/static_pages/home"
+    }, 1000);
+  <% else %>
+    $("#login-error").html('Verify your email address in the email that you received.')
+  <% end %>
+
+<% elsif !@student.blank? %>
+  $(".login > div").html('Enter a Valid Password');
+  <%if !params["sign_in"].blank?%>
+  	$("#login-error").html('Enter a Valid Password')
+  	$(".login > div").empty();
+  <%else%>
+    $(".login > div").html('Enter a Valid Password');
+    $(".login-error").empty();
+  <%end%>
+<%elsif @student.blank?%>    
+   <%if !params["sign_in"].blank?%>
+  	$("#login-error").html('Enter a Valid Email')
+  	$(".login > div").empty();
+  <%else%>
+    $(".login > div").html('Enter a Valid Email')
+    $(".login-error").empty();
+  <%end%>
+<%else%> 
+  <%if !params["sign_in"].blank?%>
+  	$("#login-error").html('Password is Invalid')
+  	$(".login > div").empty();
+  <%else%>
+    $(".login > div").html('Password is Invalid')
+    $(".login-error").empty();
+  <%end%> 
+  
+  
+<% end %>

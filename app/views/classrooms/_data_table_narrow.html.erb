@@ -1,0 +1,87 @@
+<% current_uri = request.env['PATH_INFO'] %>
+<% current_uri = URI.decode(current_uri)%>
+<% path_url = current_uri %>
+
+<table style = "text-align:left; margin-top:15px" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<% @class.each_with_index do |c,index| %>
+<% if c.date_of > Date.today %>
+<tr style ="padding-bottom:10px;">
+        <p style = "text-align:left;">Number: 
+          <% if index+1 < 10 %>
+            0<%= index+1 %>
+          <% else %>
+            <%= index+1 %>
+          <% end %>
+        </p>
+
+<p style="text-align:left;color:#343434 !important" >Topic: <%= c.topic%></p>
+<p style = "text-align:left;" >Date: <%= c.date_of%></p>
+<p style = "text-align:left;">Size: <%= (4-c.size)%></p>
+<p style = "text-align:left;">Waitlist: <%= c.waitlist%></p>
+
+<% if @reg.include? c.id %>
+<% @st.each_with_index do |s,index| %>
+<% if s.classroom_id.eql? c.id %>
+<p style = "text-align:left;">Status: <%=s.status%></p>
+<% end %>
+<% end %>
+
+
+<% if c.date_of - 2.days >=  Date.today %>
+<p style="text-align:left;margin-bottom:40px;"><a href="#" id ="<%=c.id.to_s + '/' + c.subject%>" class="without_m retake-home Retake_3" title="Start" id ="<%=c.id.to_s + '/' + c.subject%>" >Withdraw</a></p>
+<%else %>
+<td>&nbsp;</td>
+<%end%>
+
+
+<%else%>
+<%if @credit > 0 %>
+
+<%if c.size < 5%>
+<p>&nbsp;</p>
+<p style="text-align:left;margin-bottom:40px;"><a href="#" id ="<%=c.id.to_s + '/' + c.subject%>" class="sign_up_m retake-home Retake_2" title="Start" >Sign Up</a></p>
+<%else%>
+<p>&nbsp;</p>
+<p style="text-align:left;margin-bottom:40px;"><a href="#" id ="<%=c.id.to_s + '/' + c.subject%>" class="sign_up_m retake-home Retake_2" title="Start" >Waitlist</a></p>
+<%end%>
+<%else %>
+<p>&nbsp;</p>
+<p style="text-align:left;margin-bottom:40px;"><%= link_to image_tag("/assets/unlock.png", height: '40px', width: '40px;'), new_subscription_path %></p>
+<%end%>
+<%end%>
+</tr>
+<%end%>
+<% end %>
+</table>
+
+
+
+<script>
+  $( document ).ready(function() {
+    $(".sign_up_m").click(function(){
+      $(".loading").show();
+      var id =this.id;
+      x = '../attendees/' + id;
+      $.get( x , function( data ) {
+           $(".loading").hide();
+        });
+     window.location.href = "http://242chalkboard.com/classrooms/" + id.split("/")[1];
+     });
+   });   
+</script>
+
+
+<script>
+  $( document ).ready(function() {
+    $(".without_m").click(function(){
+      $(".loading").show();
+      var id =this.id;
+      x = '../attendees/' + id;
+      $.get( x , function( data ) {
+           $(".loading").hide();
+        });
+     window.location.href = "http://242chalkboard.com/classrooms/" + id.split("/")[1];
+     });
+   });   
+</script>

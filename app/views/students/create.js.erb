@@ -1,0 +1,58 @@
+<% if @student.nil? %>
+  $("#signup-error").html("You're already registered. Please Sign In");
+<% else %>
+  <% if @student.save %>
+  
+    $(".whitePopUpSignIn").hide();
+    $(".whitePopUp").hide();
+    $(".popUpConfirm").show();
+  <% end %>
+  
+  <% if !@student.errors.messages[:email].nil? && !@student.errors.messages[:password].nil? %>
+    <%if params[:signup].blank?%>
+      $("#signup-error").html("Email can't be blank <br/> Password can't be blank");
+      $("#signupPopup-error").empty();
+    <%else%>  
+      $("#signupPopup-error").html("Email can't be blank <br/> Password can't be blank").setAttribute("style", "color:red;color:red;font-size:13px;font-weight: bold;");
+      $("#signup-error").empty();
+    <%end%>
+    
+  <% elsif !@student.errors.messages[:email].nil? && !@student.errors.messages[:password].nil? %>
+    <%if params[:signup].blank?%>
+      $("#signup-error").html("Email <%= @student.errors.messages[:email][0] %> <br/> Password <%=@student.errors.messages[:password][0] %>");
+      $("#signupPopup-error").empty();
+    <%else%>  
+      $("#signupPopup-error").html("Email <%= @student.errors.messages[:email][0] %> <br/> Password <%=@student.errors.messages[:password][0] %>").setAttribute("style", "color:red;color:red;font-size:13px;font-weight: bold;");
+      $("#signup-error").empty();
+    <%end%>
+    
+  <% elsif !@student.errors.messages[:email].nil? %>
+    <%if params[:signup].blank?%>
+      $("#signup-error").html("Email <%= @student.errors.messages[:email][0] %>");
+      $("#signupPopup-error").empty();
+    <%else%>  
+      $("#signupPopup-error").html("Email <%= @student.errors.messages[:email][0] %>").setAttribute("style", "color:red;color:red;font-size:13px;font-weight: bold;");
+      $("#signup-error").empty();
+    <%end%>
+    
+  <% elsif !@student.errors.messages[:password].nil? %>
+    <%if params[:signup].blank?%>
+      $("#signup-error").html("Password <%=@student.errors.messages[:password][0] %>");
+      $("#signupPopup-error").empty();
+    <%else%>  
+      $("#signupPopup-error").html("Password <%=@student.errors.messages[:password][0] %>");
+      $("#signup-error").empty();
+    <%end%>
+    
+  <% elsif !@student.errors.messages[:password_confirmation].nil? %>
+    <%if params[:signup].blank?%>
+      $("#signup-error").html("Password doesn't match");
+      $("#signupPopup-error").empty();
+    <%else%>  
+      $("#signupPopup-error").html("Password doesn't match");
+      $("#signup-error").empty();
+    <%end%>
+    
+  <% end %>
+<% end %>
+

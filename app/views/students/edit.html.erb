@@ -1,0 +1,210 @@
+
+      <div class="popUpConfirm">
+        <h5>Are you sure</h5>
+        <div class="buttonsPopup">
+          <%= link_to "Submit",nil, :id=> "submit_edit_form" %>
+          <a href="#" class="GoBack" title="Go Back">Cancel</a></div>
+      </div>
+
+      <div class="subscription_error" style="display:none;">
+        <h5> </h5>
+        <div class="buttonsPopup">
+        <a href="#" class="GoBack" title="Go Back">Submit</a></div>
+      </div>
+
+      <section class="profile">
+        <div class="dTab"></div>
+        <h2>This is You!</h2>
+        <p class="centerText"></p>
+        <%= form_for @student, :html => {:class => "profileData"} do |f|  %>
+          <div class="formRow">
+            <label style="text-align:right;">Nickname</label>
+            <span><span class="dividerFormCol">&nbsp;</span></span>
+            <div class="secondColForm">
+              <%= f.text_field :nickname %>
+            </div>
+            <div class="cBoth"></div>
+          </div>
+
+          <div class="formRow">
+            <label style="text-align:right;">E-mail</label>
+            <span class="dividerFormCol">&nbsp;</span>
+            <div class="secondColForm yellow"><%= f.text_field :email %></div>
+            <div class="cBoth"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow">
+            <label style="text-align:right;">First Name </label>
+            <span><span class="dividerFormCol">&nbsp;</span></span>
+            <div class="secondColForm">
+              <%= f.text_field :first %>
+            </div>
+            <div class="cBoth"></div>
+          </div>
+
+          <div class="formRow">
+            <label style="text-align:right;">Last Name </label>
+            <span class="dividerFormCol">&nbsp;</span>
+            <div class="secondColForm">
+              <%= f.text_field :last %>
+            </div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label style="text-align:right;">Age </label>
+            <span class="dividerFormCol"></span>
+            <div class="secondColForm small">
+              <%= f.select :age, options_for_select(["12","13","14","15","16","17","18", "19" ],:selected=>@student.age)%>
+              <img src="/assets/customSelect_small.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label style="text-align:right;">Gender </label>
+            <span class="dividerFormCol"></span>
+            <div class="secondColForm small">
+              <%= f.select :gender, options_for_select(["boy", "girl" ],:selected=>@student.gender)%>
+              <img src="/assets/customSelect_small.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label style="text-align:right;">School </label>
+            <span class="dividerFormCol"></span>
+            <div class="secondColForm">
+            <%= f.select :school, options_for_select( ["Abaco Central High", "Abraham's Bay High", "Acklins Central High", "Agape Christian All Age", "Alpha Omega Christian", "Aquinas College", "Arhtur's Town High", "Bahamas Academy", "Bimini All Age", "Bishop Michael Eldon", "Black Point All Age", "Blairwood Academy", "C.C. Sweeting", "C.I. Gibson Senior", "C.R. Walker Senior", "C.V. Bethel Senior", "Calvary Academy", "Central Andros High", "Central Eleuthera High", "Crooked Island High", "Doris Johnson Senior", "Eight Mile Rock High", "Faith Temple Christian Academy", "Farmer's Cay All Age", "Freeport Gospel Chapel", "Galilee Academy", "Gateway Christian Academy", "Government High", "Grand Bahama Academy", "Grand Bahama Catholic", "Grand Cay All Age", "Harbour Island All Age", "Holy Name Catholic", "Inagua All Age", "Jack Hayward High", "Jordan Prince William", "Kingsway Academy", "L.N. Coakley High", "Long Cay All Age", "Lucaya International", "Lyford Cay", "Magrove Cay High", "Man-O-War Cay All Age", "Mary E Albury High", "Moores Island All Age", "Mt Caramel Preparatory Academy", "N.G.M Major High", "Nassau Christian Academy", "North Andros High", "North Eleuthera High", "North Long Island High", "Old Bight High", "Preston Albury High", "R.M. Bailey Senior", "R.N. Gomez All Age", "Ragged Island All Age", "Rum Cay All Age", "San Salvador High", "Sherlin Bootle High", "Sound Andros High", "Spanish Wells All Age", "St Andrews Anglican", "St Andrews School", "St Anne's Catholic", "St Anne's School", "St Augustine's College", "St Francis De Sales All Age", "St George's High", "St John's College", "St Paul's Methodist College", "St Vincent de Paul", "Staniel Cay All Age", "Sunland Baptist Academy", "Sweeting's Cay All Age", "Tabernacle Christian Academy", "Tambearly", "The Dunmore School", "The Island School", "Wesley College", "Westminster College", "Windermore High"],:selected=>@student.school )  %>
+             <img src="/assets/customSelect.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label style="text-align:right;">Grade </label>
+            <span class="dividerFormCol"></span>
+            <div class="secondColForm small">
+              <%= f.select :grade,options_for_select(["9","10","11","12"],:selected=>@student.grade)%>
+            
+              <img src="/assets/customSelect_small.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          <div class="formRow mT">
+            <label style="text-align:right;">Island </label>
+            <span class="dividerFormCol"></span>
+            <div class="secondColForm" style="max-height: 100px; !important;">
+
+            <%= f.select :island, options_for_select(["Abaco", "Acklins", "Andros", "Berry Islands", "Bimini Islands", "Cat Island", "Crooked Island", "Eleuthera", "Exuma", "Grand Bahama", "Long Island", "Mayaguana", "New Providence", "Ragged Island", "Rum Cay", "San Salvador"],:selected=>@student.island) %>
+              <img src="/assets/customSelect.png"></div>
+            <div class="cBoth"></div>
+          </div>
+          
+          <div class="btn"><a href="#" class="commitChanges" title="Commit Change" rel="Commit Change">Submit</a></div>
+	<div></div>
+    <% end %>
+      </section>
+    
+
+<script>
+  $( document ).ready(function() {
+    $("#submit_edit_form").click(function(){
+      var student_id = "<%= params[:id] %>"
+      $.ajax( {
+        type: "PUT",
+        url: "/students/"+student_id,
+        data: $('.profileData').serialize(),
+        success: function( response ) {
+          return false;
+        }
+      });
+    });
+  });
+</script>
+<style>
+div.fancy-select {
+  position: relative;
+  font-size: 18px;
+  color: #46565D;
+}
+
+div.fancy-select.disabled {
+  opacity: 0.5;
+}
+
+
+
+div.fancy-select div.trigger {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 7px 24px 7px 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  width: 272px;
+  font-family:open_sanslight;
+  font-size:20px;
+  font-weight:normal;
+  color:#343434;
+  text-transform:none;
+  background:url("../images/sprite_1.png") no-repeat scroll -7px -268px rgba(0, 0, 0, 0);
+}
+
+
+div.fancy-select ul.options {
+  border-radius: 4px;
+  box-shadow: 2px 1px 12px #000000;
+  left: 0;
+  list-style: none outside none;
+  margin: 0;
+  max-height: 100px;
+  min-width: 310px;
+  opacity:0;
+  overflow: auto;
+  padding: 1px 0;
+  position: absolute;
+  text-align: left;
+  top: 40px !important;
+  visibility:hidden;
+  z-index: 50;
+}
+
+div.fancy-select ul.options.open {
+  visibility: visible;
+  top: 50px;
+  opacity: 1;
+}
+
+div.fancy-select ul.options.overflowing {
+  top: auto;
+  bottom: 40px;
+
+  transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+  -o-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+}
+
+div.fancy-select ul.options.overflowing.open {
+  top: auto;
+  bottom: 50px;
+
+  transition: opacity 300ms ease-out, bottom 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+  -o-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+}
+
+div.fancy-select ul.options li {
+  padding:12px;
+  background:#fff;
+  border-top: 1px solid #999999;
+  color: #323232;
+  padding: 10px 15px;
+  transition: all 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  -moz-transition: all 150ms ease-out;
+  -ms-transition: all 150ms ease-out;
+  -o-transition: all 150ms ease-out;
+  font-size:18px;
+}
+div.fancy-select ul.options li.hover {
+  background: #51D3DA;
+}
+</style>

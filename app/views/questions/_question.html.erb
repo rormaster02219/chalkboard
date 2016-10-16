@@ -1,0 +1,305 @@
+ <div class="dTab"></div>
+  <div class="madulePage testpage mod1">
+  
+  <div class="cBoth"></div>
+  <div class="slider">
+    <div id="homeSlider1" class="homeSlider">
+      <div class="homeSliderChild">
+        <ul>
+          <li>
+            <div class="leftChildQ">
+              <div class="questionPanel" id="<%=@question.number%>">
+                <p class="question" style="font-size:18px;">Question Number: <span class="yellow"><%=@question.number%></span> out of <span class="yellow"><%=@total_incorrect + @total_correct%></p>
+		<div class="blackLabel22 <%if !@question.image.blank?%>questionBox<%end%>">
+                  <div <%if !@question.image.blank?%>class="questionBoxB"<%end%>>
+                    <div id="questionText" <%if !@question.image.blank?%>class="questionText"<%end%>>
+                      <span class="question_image_text"><span><%= @question.question %></span style="background-color:red;"></span><br/>
+                      <%=image_tag  @question.image.url(:medium) ,:id=>"question_image" if !@question.image.blank?%>                              
+                    </div>
+                 </div> 
+                </div>                
+		<!-- blackLabel22 -->
+              </div>
+              <!-- questionPanel -->
+
+              <div class="answerPanel">
+                <p class="question" style="font-size:18px;">Solution Number:
+                  <span class="yellow"><%=@question.number%> </span>
+                   out of <span class="yellow"><%=@total_incorrect + @total_correct%>
+                </p>
+                <div class="blackLabel22 <%if !@question.image_solution.blank?%>questionBox<%end%>">
+                  <div <%if !@question.image_solution.blank?%>class="questionBoxB"<%end%>>
+                    <div id="solutionText" <% if !@question.image_solution.blank?%>class="questionText"<%end%>>
+                      <span class="solution_image_text"><%= @question.solution%></span><br/>
+                      <%= image_tag @question.image_solution.url(:medium) ,:id=>"solution_image" if !@question.image_solution.blank?%>                              
+                    </div> 
+                  </div> 
+
+                </div>
+              </div>
+              <!-- answerPanel -->        
+            </div>
+            <!-- leftChildQ -->
+
+            <div class="rightChildQ" >
+            <div class="whiteDividerLineLeft">
+            <div class="nailedIt"></div>
+            <div class="answerChoice">
+                <p class ="nailedIt2"></p>
+                <div class="radioBtnGrp">
+                  <% if @result.blank? %>
+                    <span class="withSelectedText">
+                      <b class=""></b>
+                  <% elsif @question.choice_a == @result.first.student_answer  %> 
+                    <span class="withSelectedText radioSelectP">
+                      <b class="checked"></b> 
+                  <%else%>
+                    <span class="withSelectedText">
+                      <b class=""></b>
+                  <% end %>
+
+                  <input type="radio" <% if @result.blank? %> ?<% elsif @question.choice_a == @result.first.student_answer %>checked="checked"<%end%>
+                  <%if @question.choice_a ==@question[@question.answer] %>answer="true"<% end %>val="<%=@question.choice_a%>" name="sortByRadio" /><%= @question.choice_a %><br/>
+                  <%=image_tag @question.choice_a_image.url(:small) if !@question.choice_a_image.blank?  %></span> 
+                  <br/>
+                  <% if @result.blank? %>
+                    <span class="withSelectedText">
+                    <b class=""></b>
+                  <% elsif @question.choice_b == @result.first.student_answer  %> 
+                    <span class="withSelectedText radioSelectP">
+                    <b class="checked"></b>
+                  <%else%>
+                    <span class="withSelectedText">
+                    <b class=""></b>
+                  <% end %>
+
+                  <input type="radio" id = "answerR"
+
+                  <% if @result.blank? %> 
+                  
+                  <% elsif @question.choice_b == @result.first.student_answer %>
+                  checked="checked"
+                  <% end %>
+                  <% if @question.choice_b ==@question[@question.answer] %>
+                    answer="true"
+                  <% end %>
+                  name="sortByRadio" val = "<%=@question.choice_b %>" />    
+                  <%= @question.choice_b %><br/>
+                  <%=image_tag @question.choice_b_image.url(:small) if !@question.choice_b_image.blank?  %></span>
+                  <br/>
+		<% if !@question.choice_c.blank? %>
+                  <% if @result.blank? %>
+                    <span class="withSelectedText" >
+                    <b class=""></b>
+                  <% elsif @question.choice_c == @result.first.student_answer  %> 
+                    <span class="withSelectedText radioSelectP" >
+                      <b class="checked"></b>
+                  <%else%>
+                  <span class="withSelectedText" >
+                    <b class=""></b>
+                  <% end %>
+                  <input type="radio" id = "answerR"
+                  <% if @result.blank? %> 
+                  
+                  <% elsif @question.choice_c == @result.first.student_answer %>
+                  checked="checked"
+                  <% end %>
+                  <% if @question.choice_c ==@question[@question.answer] %>
+                    answer="true"
+                  <% end %>
+                  name="sortByRadio" val = "<%= @question.choice_c%>"/>    
+                  <%= @question.choice_c %><br/>
+                  <%=image_tag @question.choice_c_image.url(:small) if !@question.choice_c_image.blank?  %></span> 
+                  <br/>
+		<% end %>
+
+		<% if !@question.choice_d.blank?%> 
+                 <% if @result.blank? %>
+                  <span class="withSelectedText" >
+                  <b class=""></b>
+                  <% elsif @question.choice_d == @result.first.student_answer  %> 
+                    <span class="withSelectedText radioSelectP">
+                      <b class="checked"></b>
+                  <%else%>
+                    <span class="withSelectedText">
+                    <b class=""></b>
+                  <% end %>
+
+                  <input type="radio" id = "answerR"
+                  <% if @result.blank? %> 
+
+                  <% elsif @question.choice_d == @result.first.student_answer %>
+                  checked="checked"  
+                  <% end %>
+                  <% if @question.choice_d ==@question[@question.answer] %>
+                    answer="true"
+                  <% end %>
+                  name="sortByRadio" val = "<%=@question.choice_d%>" />    
+                  <%= @question.choice_d %><br/>
+                  <%=image_tag @question.choice_d_image.url(:small) if !@question.choice_d_image.blank?  %></span>
+		<%end%>
+                </div>
+              </div>
+              
+              <!-- whiteDividerLineLeft -->
+              </div>
+            </div>
+            
+            <!-- rightChildQ -->                  
+          </li>  
+        </ul>
+      </div>
+      <!-- homeSliderChild -->
+      <div class="pageWithVerification">
+        
+      <%if @back == 0 %>
+          <a class="sliderPrvBtn" href="#" title="Prev" id="slide_prev" ></a>
+        <% else %>
+          <a class="sliderPrvBtn" href="<%=@back%>" title="Prev" id="slide_prev"></a>
+        <% end %>
+       <% if @question.number == @total%>
+            <a class="sliderNextBtn" href="#" title="Next" id="slide_next"></a>
+          <% else %>
+            <a class="sliderNextBtn" href="<%=@fwd%>" title="Next" id="slide_next"></a>
+          <% end %>
+
+          <%= link_to "Solution", "#", :class=>"show_answer doneNow", :title=>"Solution" ,:remote=>true%>
+          <%= link_to "Question", "#", :class=>"showQuestion doneNow", :title=>"Question" ,:remote=>true, :style=>"display:none"%>
+
+          <a href="#" class="exit" title="Finish">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+       
+        </div>
+        <!-- leftSection -->
+      
+      <!-- pageWithVerification -->
+      
+       
+      
+      </div>
+    </div>
+  </div>
+<script>
+$(document).ready(function(){
+  var questionHeight = $("#question_image").height();
+  var questionImageText = $(".question_image_text").height();
+  var mathHeight = $(".MathJax_Display").height();
+  $("#questionText").attr("style","min-height:"+(questionHeight+questionImageText+mathHeight)+"px;overflow:hidden;");
+  var solutionnHeight = $("#solution_image").height();
+  var solutionImageText = $(".solution_image_text").height();
+  $("#solutionText").attr("style","min-height:"+(solutionnHeight+solutionImageText+mathHeight)+"px;overflow:hidden;");
+
+  $(".showQuestion").click(function(){
+    $(".answerPanel").hide();
+    var que ="<%=@question.number%>"
+    $("#"+que).show();
+    $("section").customScrollbar("resize", true);
+
+    $(".show_answer").show();
+    $(".showQuestion").hide();
+
+    return false;
+  }); 
+
+  $(".show_answer").click(function(){
+    $(".questionPanel").hide();
+    $(".answerPanel").show();
+    $("section").customScrollbar("resize", true);
+
+    $(".show_answer").hide();
+    $(".showQuestion").show();
+    return false;
+  })
+    $(".sliderPrvBtn ,.validate-module,.sliderNextBtn").click(function(){
+     
+      var module_test = "<%= params[:module_test]%>"
+      var click_id = $(this).attr("id");
+      var question_id = "<%= @question.id%>"
+      var subject = "<%= params[:subject]%>"
+      var validate="validate"
+      var number = "<%= @question.number %>"
+       $.ajax({
+        type : 'GET',
+        url : '<%= questions_student_answer_create_path%>',
+        data: {'question_id' : question_id,"number" :number, "type" : click_id,"module_test" :module_test,"validate" :validate,"subject" :subject },
+        success: function () {
+          }
+        });
+       return false;
+    });
+
+    $(".exit").click(function(){
+       var module_test = "<%= params[:module_test]%>"      
+       var question_id = "<%= @question.id%>"
+       var answer = $(".rightChildQ input:radio[name=sortByRadio]:checked").attr("val")
+       var number = "<%= @question.number %>"
+       var url = "<%= @question.subject %>"
+       var mode = "<%= @question.module_test %>"
+       var subject ="<%= params[:subject] %>"
+       $.ajax({
+        type : 'GET',
+        url : '<%= questions_student_answer_create_path %>',
+        data: {'question_id' : question_id,'answer' : answer, "number" :number ,"module_test" :module_test,"subject" :subject,"url" : url,"mode" :mode, "data": "done now"},
+        success: function () {
+          // var total = "<%= @total %>"
+          // var question_no = "<%=@question.number %>"
+          }
+        });
+       });
+
+
+    $(".pageWithVerification .solution").click(function(){
+
+
+ if( ($(this).html()) =='Solution' )
+ {
+   $(".questionPanel").hide();
+   $(".answerPanel").show();
+   $(this).html('Question'); 
+    document.getElementById("que_solution").classList.add('validate-answer');
+   document.getElementById("que_solution").classList.remove('solution');
+    document.getElementById("validate_ans").classList.remove('validate-answer');
+   document.getElementById("validate_ans").classList.add('validate');
+ }
+ else  
+ {
+ 
+  $(".answerPanel").hide();
+  $(".questionPanel").show();
+  $(this).html('Solution');
+   document.getElementById("que_solution").classList.remove('validate-answer');
+   document.getElementById("que_solution").classList.add('solution');
+   document.getElementById("validate_ans").classList.remove('validate-answer');
+   document.getElementById("validate_ans").classList.add('validate');
+ }
+ return false;
+
+ });
+ $("input:radio").click(function() {
+        
+      var click_id = "validate_ans"
+      
+       var module_test = "<%= params[:module_test]%>"
+       var question_id = "<%= @question.id%>"
+       var subject ="<%= params[:subject] %>"
+        var answer = $(" input:radio[name=sortByRadio]:checked").attr("val")
+        
+        var validate="validate"
+      var number = "<%= @question.number %>"
+       $.ajax({
+        type : 'GET',
+        url : '<%= questions_student_answer_create_path%>',
+        data: {'question_id' : question_id,'answer' : answer, "number" :number, "type" :click_id,"module_test" :module_test,"subject" :subject,"validate" :validate },
+        success: function () {
+          }
+        });
+       return false;
+      });
+  }); 
+
+ </script>
+<script>
+   MathJax.Hub.Typeset();
+</script>
+
+
+

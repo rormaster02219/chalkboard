@@ -1,0 +1,88 @@
+
+
+<section>
+<div class="whitePopUpSignIn invitePopUpSignup forgot_password_reset" style="position:fixed; margin-left: 33%;margin-left: 34%;"> 
+
+      <%= form_for(@student, :html => {:class => "signup_header",:style=>"margin-top: 30px;"} ) do |f| %>
+            <div id="signupPopup-error" style="color:red;color:red;font-size:13px;font-weight: bold;"></div>
+              <p>
+                <label style="text-align: right;margin-left: 19px;">Nickname</label>
+                <%= f.text_field :nickname, class: "i1",style:" margin-left:21px;" %>
+              </p>
+              <p class="label" style="margin-left: 10%;">
+                <label></label>
+                <span>enter nickname</span></p>
+              <p>
+                <label style="text-align: right;margin-left: 27px;" >Email</label>
+                <%= f.text_field :email, class: "i1",style:" margin-left:10px;"%>
+              </p>
+              <p class="label" style="margin-left: 10%;">
+                <label ></label>
+                <span>enter email address</span></p>
+              <p>
+                <label style="text-align: right;margin-left: 19px;">Password</label>
+                <%= f.password_field :password, class: "i1",style:" margin-left:21px;" %>
+              </p>
+              <p class="label" style="margin-left: 10%;">
+                <label></label>
+                <span>enter password</span></p>
+              <p>
+                <label style="text-align: right;margin-left: -5px">Confirmation</label>
+                <%= f.password_field :password_confirmation, class: "i1",style:" margin-left:40px;" %>
+              </p>
+              <p class="label" style="margin-left: 10%;">
+                <label style="text-align:right;"></label>
+                <span>reenter password</span></p>
+               <p class="customRadio">
+                <label></label>
+                <span><b class="checked"></b>
+                <input type="radio" checked="checked" name="inviteRadio" />
+                BGCSE</span><span>
+                </p>
+                <br/>
+                <%=hidden_field_tag "signup","signup"%>
+                <p class="btnPanel"><a href="#" class="yallowBtn signup_header_path padding-set" >Submit</a>
+                <a href="#" class="grayBtn reset reset_signup_popup padding-set">Reset</a></p>
+                </p>
+            <br/>    
+          <% end %>
+        
+
+      </div>
+
+
+      <p class="centerText" style="display:none;">
+        <a class="forgetP in popup" rel="forgot_password_reset" href="#" title="Forget Passsword?" id="foofaa">Forget Passsword?</a>
+      </p>
+  </section>
+  
+<script>
+$(document).ready(function() {
+  $('#foofaasignup a').trigger('click');
+  $(".signup_header_path").click(function(){
+    $.ajax( {
+      type: "POST",
+      url: "/students",
+      data: $('.signup_header').serialize(),
+      success: function( response ) {
+        return false;
+      }
+      
+    } );
+     return false; 
+  });
+});
+</script>
+<style>
+  h3 {
+    color: #343434;
+    font-family: amatic_scbold;
+    font-size: 47px;
+    font-weight: normal;
+    line-height: 0;
+    margin-right: 20px;
+    margin-top: 19px;
+    text-align: center;
+}
+ 
+</style>

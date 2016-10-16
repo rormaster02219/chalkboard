@@ -1,0 +1,171 @@
+
+<% if @which.eql? "test"%>
+	<% if !@question.nil? %>
+  		$("#questions_div").html("<%= escape_javascript(render(:partial => 'test', :locals=> {:@question => @question, :@result => @result, :@fwd=>@fwd , :@back => @back } )) %>");
+      	$(".start_time").html(window.start_counter);
+      	$(".end_time").html(window.end_counter);
+
+	<% end %>
+setTimeout(function(){setScrenSize();$("section").customScrollbar("resize", true);}, 500);
+<% else %>
+	<% if !@question.nil?%>
+	  $("#questions_div").html("<%= escape_javascript(render(:partial => 'question', :locals=> {:@question => @question, :@result => @result, :@fwd=>@fwd , :@back => @back,:@total_correct=>@total_correct,:@total_incorrect=>@total_incorrect,:@total_completed_percentage=>@total_completed_percentage,:@total_test_question=>@total_test_question } )) %>");
+	<% end %>
+setTimeout(function(){setScrenSize();$("section").customScrollbar("resize", true);}, 500);
+<% end %>
+
+
+<%if params[:data]=="done now"%>
+  window.location.href="/subjects/<%=params[:url]%>/<%=params[:mode]%>"
+<%end%>
+
+<% if !@question.nil? %>
+
+	$(".radioBtnGrp input[type='radio']").click(function(){
+		$(".radioBtnGrp .checked").removeClass();
+		$(this).prev().addClass('checked');
+		$(".withSelectedText.radioSelectP").removeClass('radioSelectP');
+		$(this).parent('.withSelectedText').addClass('radioSelectP');
+
+	});
+
+<% end %>
+
+
+<%if params[:type]=="validate_ans" && params[:validate]=="validate" && params[:module_test]!="test"%>
+
+	var cMar =  - (eval($(".homeSliderChild ul").css("marginLeft").substring(0, $(".homeSliderChild ul").css("marginLeft").length - 2)));
+	currentSlide = cMar / ($(".homeSliderChild ul li").width());
+
+	if(($(".homeSliderChild ul li:eq(" + currentSlide + ") .radioBtnGrp .radioSelectP input[type='radio']").attr('answer')) =='true')
+	 {
+	 	// $(".questionPanel").hide();
+   // 		$(".answerPanel").show();
+
+   		var total_completed_percentage='<%=@total_completed_percentage%>'
+   		$(".total_completed").html("["+total_completed_percentage+"%]");
+   		var total_correct_percentage='<%=@total_correct_percentage%>'
+   		$(".total_correct_percentage").html("["+total_correct_percentage+"%]");
+   		var completed='<%=@completed%>'
+   		$(".completed").html(completed);
+                var total_test_question='<%=@total_test_question%>'         
+                $(".total_test_question").html(total_test_question);
+   		var total_correct='<%=@total_correct%>'
+   		$(".total_correct").html(total_correct);
+   		var total_incorrect='<%=@total_incorrect%>'
+   		$(".total_incorrect").html(total_incorrect);
+
+   		$("#total_completed_percentage_red").width((total_completed_percentage)+"%");
+   		$("#total_correct_percentage_accuracy").width((total_correct_percentage)+"%");
+   		var pieChart='<%= chart_180(pie_chart_degree((@module_stats["complete_percent_module"]))) %>'
+   		// document.getElementById("pieChart").classList.add('pieChart');
+
+   		var complete_percent_module_white='<%=@module_stats["complete_percent_module"]%>'
+   		
+   		$(".complete_percent_module_white").html(100-complete_percent_module_white+"%");
+
+   		var complete_percent_module_yellow='<%=@module_stats["complete_percent_module"]%>'
+   		$(".complete_percent_module_yellow").html(complete_percent_module_yellow+"%");
+   		
+		var complete_module_yellow='<%=@module_stats["complete_module"] %>'
+		$(".complete_module_yellow").html(complete_module_yellow);
+
+		var incomplete_module_white='<%=@module_stats["incomplete_module"] %>'
+		$(".incomplete_module_white").html(incomplete_module_white);
+		$(".pieCircleModule").html("<%= escape_javascript(render(:partial => 'pie_chart')) %>");
+   	$(".nailedIt2").html("<img src='/assets/correct.png' />&nbsp;&nbsp;You are Correct!").show();
+		document.getElementById("validate_ans").classList.add('validate-answer');
+		document.getElementById("validate_ans").classList.remove('validate');
+	}
+	else
+	{
+		var total_completed_percentage='<%=@total_completed_percentage%>'
+   		$(".total_completed").html("["+total_completed_percentage+"%]");
+   		var total_correct_percentage='<%=@total_correct_percentage%>'
+   		$(".total_correct_percentage").html("["+total_correct_percentage+"%]");
+   		var completed='<%=@completed%>'
+   		$(".completed").html(completed);
+                var total_test_question='<%=@total_test_question%>'         
+                $(".total_test_question").html(total_test_question);
+   		var total_correct='<%=@total_correct%>'
+   		$(".total_correct").html(total_correct);
+   		var total_incorrect='<%=@total_incorrect%>'
+   		$(".total_incorrect").html(total_incorrect);
+
+   		$("#total_completed_percentage_red").width((total_completed_percentage)+"%");
+   		$("#total_correct_percentage_accuracy").width((total_correct_percentage)+"%");
+
+   		var complete_percent_module_white='<%=@module_stats["complete_percent_module"]%>'
+   		$(".complete_percent_module_white").html(100-complete_percent_module_white+"%");
+
+   		var complete_percent_module_yellow='<%=@module_stats["complete_percent_module"]%>'
+   		$(".complete_percent_module_yellow").html(complete_percent_module_yellow+"%");
+   		var complete_module_yellow='<%=@module_stats["complete_module"] %>'
+		$(".complete_module_yellow").html(complete_module_yellow);
+
+		var incomplete_module_white='<%=@module_stats["incomplete_module"] %>'
+		$(".incomplete_module_white").html(incomplete_module_white);
+
+	   	$(".pieCircleModule").html("<%= escape_javascript(render(:partial => 'pie_chart')) %>");
+    			
+		$(".nailedIt2").html("<img src='/assets/wrong.png' />&nbsp;&nbsp;Oops! Try Again!").show();
+	}
+<%end%>
+
+	$(".pageWithVerification .validate-module").click(function(){
+
+		var cMar =  - (eval($(".homeSliderChild ul").css("marginLeft").substring(0, $(".homeSliderChild ul").css("marginLeft").length - 2)));
+		currentSlide = cMar / ($(".homeSliderChild ul li").width());
+		if(($(".homeSliderChild ul li:eq(" + currentSlide + ") .radioBtnGrp .radioSelectP input[type='radio']").attr('answer')) =='true')
+		{
+			$(".nailedIt").html("Excellenta");
+			document.getElementById("validate_ans").classList.add('validate-answer');
+			document.getElementById("validate_ans").classList.remove('validate');
+		}
+		else
+		{
+			$(".nailedIt").html("Sorry Incorrect");
+			document.getElementById("validate_ans").classList.add('validate-answer');
+			document.getElementById("validate_ans").classList.remove('validate');
+		}
+	});
+
+
+
+<%if params[:module_test]=="test"%>
+
+  var total_completed_percentage='<%=@total_completed_percentage%>'
+   		$(".total_completed").html("["+total_completed_percentage+"%]");
+   		var total_correct_percentage='<%=@total_correct_percentage%>'
+   		$(".total_correct_percentage").html("["+total_correct_percentage+"%]");
+   		var completed='<%=@completed%>'
+   		$(".completed").html(completed);
+                var total_test_question='<%=@total_test_question%>'         
+               $(".total_test_question").html(total_test_question);
+   		var total_correct='<%=@total_correct%>'
+   		$(".total_correct").html(total_correct);
+   		var total_incorrect='<%=@total_incorrect%>'
+   		$(".total_incorrect").html(total_incorrect);
+
+   		$("#total_completed_percentage_red").width((total_completed_percentage)+"%");
+   		$("#total_correct_percentage_accuracy").width((total_correct_percentage)+"%");
+   		// var pieChart='<%= chart_180(pie_chart_degree((@module_stats["complete_percent_module"]))) %>'
+   		// document.getElementById("pieChart").classList.add('pieChart');
+
+   		var complete_percent_module_white='<%=@module_stats["complete_percent_module"]%>'
+   		
+   		$(".complete_percent_module_white").html(100-complete_percent_module_white+"%");
+
+   		var complete_percent_module_yellow='<%=@module_stats["complete_percent_module"]%>'
+   		$(".complete_percent_module_yellow").html(complete_percent_module_yellow+"%");
+   		
+		var complete_module_yellow='<%=@module_stats["complete_module"] %>'
+		$(".complete_module_yellow").html(complete_module_yellow);
+
+		var incomplete_module_white='<%=@module_stats["incomplete_module"] %>'
+		$(".incomplete_module_white").html(incomplete_module_white);
+		$(".pieCircleModule").html("<%= escape_javascript(render(:partial => 'pie_chart')) %>");
+<%end%>
+
+
+$("section").customScrollbar("resize", true);

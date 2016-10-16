@@ -1,0 +1,13 @@
+
+<% if @values.values.include? "" %>
+  $(".subscription_error h5").html("Please fill All the Fields");
+  $(".subscription_error").css("display", "block");
+<% elsif @values[:password] != @values[:password_confirmation] %>
+  $(".subscription_error h5").html("Password doesn't match");
+  $(".subscription_error").css("display", "block");
+<% else %>
+  <% @student.update_attributes(@values) %>
+  <% flash[:success] = "Profile updated" %>
+  window.location = "/students/<%= @student.id %>"
+<% end %>
+

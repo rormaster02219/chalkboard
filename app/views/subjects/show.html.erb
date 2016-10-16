@@ -1,0 +1,61 @@
+
+<div id = 'question_section'>
+      <section class="chooseModuleSection">
+      <div class="dTab"></div>
+        <div class="chooseModule mathSingle">
+          <div class="chooseMHeader"> <!-- <a class="exportExcel">Export to Excel</a> -->
+            <div class="labelsRight">
+              <div class="markers">
+                <label class="yellowB"></label>
+                <span class="yellowLabel">Attempted</span>
+                <label class="whiteB"></label>
+                <span class="whiteLabel">Unattempted</span> </div>
+              <div class="markers">
+                <label class="redB"></label>
+                <span class="redLabel">Correct</span>
+                <label class="whiteB"></label>
+                <span class="whiteLabel">Incorrect</span> </div>
+            </div>
+            <div class="selectModuleDrop" >
+             
+            </div>
+	    <div class = 'table_wide'>	
+            <div class="radioBtnGrp" >
+              
+              <span><b class="checked"></b>
+                <input type="radio" checked="checked" name="sortByRadio" value="name" />
+                Name</span>
+              <span><b class=""></b>
+                <input type="radio" name="sortByRadio" value="Completed" />
+                Attempted</span>
+              <span><b class=""></b>
+                <input type="radio" name="sortByRadio" value="result" />
+                Accuracy</span> 
+
+            </div>
+            <div class="dataTable">
+              <%= render "data_table" %>
+            </div>
+            </div>
+            <div class = 'table_narrow'><%= render "data_table_narrow" %></div>
+          </div>
+        </div>
+      </section>
+
+</div>
+
+
+<script>
+$("input:radio[name=sortByRadio]").click(function() {
+    var value = $(this).val();
+    console.log(value);
+    $.ajax({
+        type : 'GET',
+        url : "/subjects/<%= params[:subject] %>/<%= params[:module_test] %>",
+        data: {'sort_by' : value },
+        success: function (data) {
+	  }
+        });
+
+});
+</script>

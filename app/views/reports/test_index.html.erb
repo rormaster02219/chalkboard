@@ -1,0 +1,113 @@
+<%#= @points %>
+
+<section>
+     <div class="dTab"></div>
+        <div class="quickReport">
+          <div>
+            
+            
+            <div class="notestsReport">Overall Test Accuracy</div>
+            <div class="pieCharts">
+              <% @test.each_with_index do |test_list, index| %>
+                <div class="PieBlock">
+                  
+                  <p><span class="white"><%=pie_chart_round(test_list[1]["complete_false_percent_module"]) %>%</span><span class="subRed" style="float:right;"><%= pie_chart_round(test_list[1]["complete_true_percent_module"]) %>%</span></p>
+                  <div class="cBoth"></div>
+                  <div class="pie EN <%= red_chart_180(pie_chart_degree(pie_chart_round(test_list[1]["complete_true_percent_module"]))) %>">
+                    <div class="pieContainer">
+                      <div class="pieBackground"></div>
+                      <div id="pieSlice1" class="hold">
+                        <% chart_draw = pie_chart_degree(pie_chart_round(test_list[1]["complete_true_percent_module"])).to_s+"deg" %>
+                        <div class="pieCircle" style="-webkit-transform:rotate(<%=chart_draw%>);-moz-transform:rotate(<%=chart_draw%>);-o-transform:rotate(<%=chart_draw%>);transform:rotate(<%=chart_draw%>);">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="../assets/circle.png" /> 
+                  <%if test_list.first=="mathematics"%>
+                    <span class="qReportIcon icon3">
+                  <%elsif test_list.first=="chemistry"%>
+                    <span class="qReportIcon icon3" style="background-position:-483px -181px">
+                  <%elsif test_list.first=="physics"%>
+                      <span class="qReportIcon icon3" style="background-position:-594px -181px">
+                  <%elsif test_list.first=="biology"%>
+                    <span class="qReportIcon icon3" style="background-position:-346px -181px">
+                  <%end%>
+                  </span>
+                  <p><span class="white"><%= test_list[1]["complete_false_module"] %></span><span class="subRed" style="float:right;"><%= test_list[1]["complete_true_module"] %></span></p>
+                  <div class="cBoth"></div>
+                  <p class="title18Black black caps upFrame"><%= test_list[0] %></p>
+                </div>
+                <% if index+1 < @test.count %>
+                  <div class="divider"></div>
+                <% end %>
+              <% end %>
+              <div class="cBoth"></div>
+              <div class="markers">
+                <label class="redB"></label>
+                <span class="redLabel">Correct</span>
+                <label class="whiteB"></label>
+                <span class="whiteLabel">Incorrect</span>
+              </div>
+            </div>
+          <div class="cBoth"></div>
+            <div style="border-top: 1px solid rgb(255, 255, 255); margin: 38px auto 0px; width: 600px;"></div>
+          </div>
+
+          <div class="notestsReport">Overall Test Attempts</div>
+            <div class="pieCharts">
+              <% @test.each_with_index do |test_list, index| %>
+                <div class="PieBlock">
+                  
+                  <p><span class="white"><%= pie_chart_round(test_list[1]["incomplete_module_percent"]) %>%</span><span class="yellow"><%= pie_chart_round(test_list[1]["complete_module_percent"]) %>%</span></p>
+                  <div class="cBoth"></div>
+                  <div class="pie EN <%= chart_180(pie_chart_degree(pie_chart_round(test_list[1]["complete_module_percent"]))) %>">
+                    <div class="pieContainer">
+                      <div class="pieBackground"></div>
+                      <div id="pieSlice1" class="hold">
+                        <% chart_draw = pie_chart_degree(pie_chart_round(test_list[1]["complete_module_percent"])).to_s+"deg" %>
+                        <div class="pieCircle" style="-webkit-transform:rotate(<%=chart_draw%>);-moz-transform:rotate(<%=chart_draw%>);-o-transform:rotate(<%=chart_draw%>);transform:rotate(<%=chart_draw%>);">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="../assets/circle.png"/> 
+                  <%if test_list.first=="mathematics"%>
+                    <span class="qReportIcon icon3">
+                  <%elsif test_list.first=="chemistry"%>
+                    <span class="qReportIcon icon3" style="background-position:-483px -181px">
+                  <%elsif test_list.first=="physics"%>
+                      <span class="qReportIcon icon3" style="background-position:-594px -181px">
+                  <%elsif test_list.first=="biology"%>
+                    <span class="qReportIcon icon3" style="background-position:-346px -181px">
+                  <%end%>
+                  </span>
+                  <p><span class="white"><%= test_list[1]["incomplete_module"] %></span><span class="yellow"><%= test_list[1]["complete_module"] %></span></p>
+                  <div class="cBoth"></div>
+                  <p class="title18Black black caps upFrame"><%= test_list[0] %></p>
+                </div>
+                <% if index+1 < @test.count %>
+                  <div class="divider"></div>
+                <% end %>
+              <% end %>
+              <div class="cBoth"></div>
+              <div class="markers">
+                <label class="yellowB"></label>
+                <span class="yellowLabel">Attempted</span>
+                <label class="whiteB"></label>
+                <span class="whiteLabel">Unattempted</span>
+              </div>
+            </div>
+
+              
+        
+      </section>
+<style>
+.notestsReport { 
+  font-size: 22px!important;
+  margin: 40px auto 0!important;
+  padding-top: 6px!important;
+  text-align: center!important;
+  width: 600px!important;
+}
+</style>

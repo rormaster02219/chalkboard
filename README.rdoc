@@ -1,0 +1,17 @@
+== README
+Please find the below commands :-
+1.  To get a clone of the application's code, firstly login with your heroku account then write the below command on terminal :-
+    git clone  git@heroku.com:chalkboard242.git
+if found any error of public key, please follow steps below :-
+    a. ssh-keygen (to generate new keys)
+    b. ssh-add
+    c. heroku keys:add (to add your system ssh keys on heroku account).
+
+
+2. After making any changes to the application, to push the code to heroku, follow steps below :-
+    a. git status (to know which files are changed)
+    b. git add .   (run if you added any new file or folder in the app.)
+    c. git commit -a -m "push to heroku" (to commit your changes that you done, here -a indicate all files, -m indicate the message of the commit which you'll write in "..." after -m)
+        [Note] : If you don't want to commit all files, you can individually add the files in the command which you want to (for example:- git commit app/controllers/subjects_controller.rb app/views/questions/show.html.erb -m "two files to be committed")
+    d. git push heroku master (to push the committed code to heroku... by default heroku use master branch )
+

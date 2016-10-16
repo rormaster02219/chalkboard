@@ -1,0 +1,174 @@
+<% current_uri = request.env['PATH_INFO'] %>
+<% current_uri = URI.decode(current_uri)%>
+<% path_url = current_uri %>
+<% count = 0 %>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Attempted</th>
+    <th>Accuracy</th>
+    <th>Action</th>
+    <% if path_url.ends_with?("test")%> 
+      <th>&nbsp;</th>
+    <% end %>  
+  </tr>
+</thead>
+
+  <% @statistics.each_with_index do |stat,index| %>
+
+    <%#=button_to i, {:controller => :questions, :action => 'show', :subject => "mathematics", 
+     :module_test_name => i, :module_test => @which,:number => @i}, :form => {:name => 'go_module_test'}, :method => :get, :remote => true %>
+      <tr>
+        <td>
+          <% if index+1 < 10 %>
+            0<%= index+1 %>
+          <% else %>
+            <%= index+1 %>
+          <% end %>
+        </td>
+        
+        <td style="color:#343434 !important" ><%= stat[0] %></td>
+        <td>
+          <div class="progressBarBox">
+            <div class="pb">
+              <div class="progressBar yellowBar"><span class="yellow"><%= pie_chart_all(stat[1])["answered"] %></span>
+                  <div class="prograssBarCode">
+                    <div class="subMarksP"></div>
+                    <div class="MarksP red" style="width:<%= pie_chart_all(stat[1])["total_answered_percentage"]%>%;"></div>
+                      <img src="/assets/progress.png"/>
+                  </div>
+              <span class="white"><%= pie_chart_all(stat[1])["unanswered"] %></span>   
+              </div>
+              
+               <div style="float: left; margin-left: 5px;">
+                <span class="retake_test">[<%= (stat[1])["total_answered_percentage"]%>%]</span>
+              <div>
+            </div>
+          </div>
+        </td>
+        <td><div class="progressBarBox">
+            <div class="pb">
+              <div class="progressBar"> <span class="subRed"><%= pie_chart_all(stat[1])["correct"] %></span>
+                <div class="prograssBarCode">
+                  <div class="subMarksP"></div>
+                  <div class="MarksP red" style="width:<%= pie_chart_all(stat[1])["total_result_percentage"]%>%;"></div>
+                  <img src="/assets/progress.png" />
+                </div>
+                <span class="white"><%= pie_chart_all(stat[1])["incorrect"] %></span>
+              </div>
+               
+               <div style="float: left; margin-left: 5px;">
+              
+              <span class="retake_test">[<%=(stat[1])["total_result_percentage"]%>%]</span>
+            </div>
+            </div>
+          </div>
+        </td>
+       
+
+        <td width="130" style="font-family:open_sanssemibold;">
+          <% if @locked == "no"%>
+            <a href="#" class="retake-home Retake" title="Start" id ="<%=stat[0]%>" >Start</a> 
+
+	  <%else %>
+            <%if count == 0%>
+            <a href="#" class="retake-home Retake" title="Start" id ="<%=stat[0]%>" >Start</a>
+            <% else %>
+              <%= link_to image_tag("/assets/unlock.png", height: '40px', width: '40px;'), new_subscription_path %>
+	    <% end %>
+     	
+          <% end %>          
+        </td>
+            
+       
+      </tr>
+            <% count = 1%>
+    <% end %>
+    
+  </table style="padding-bottom:20px;">
+
+
+<% if path_url.ends_with?("test")%>
+
+<% count = 0 %>
+<% fh = "private/" + params[:subject].downcase %>
+<% list_dir = Dir.entries(fh)%>
+
+<% arr = Array.new %>
+<% list_dir.each_with_index do |item,index| %>
+<% t = item.split("-")[2] %>
+<% t = t.to_s.split(".")[0].to_s.split(" ")[2]%>
+<% arr.push(t.to_i) %>
+<% end %>
+<% arr %>
+<% arr = arr.uniq %>
+<% arr = arr.sort %>
+
+
+<h3 style="color:#ffd22b">Past Examination Papers</h3>
+<br/>
+<table style = "width:50%">
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Date</th>
+<th>E-Book</th>
+</tr>
+
+<%indexs = 0 %>
+<% arr.each do |val| %>
+<% list_dir = Dir.glob(File.join(fh,"* #{val}.pdf"))%>
+<% list_dir.sort.each_with_index do |item,index| %>
+<% pass = item.split("/")[2] %>
+<% if item.include? "pdf" %>
+<% split_list = item.split("-")%>
+<tr>
+        <td style="padding-right:20px">
+          <% if indexs+1 < 10 %>
+            0<%= indexs+1 %>
+          <% else %>
+            <%= indexs+1 %>
+          <% end %>
+        </td>
+<% indexs = indexs + 1 %>
+<td style="color:#343434 !important">Paper <%= split_list[1] %></td>
+<% x= split_list[2] %>
+<td style="color:#343434 !important"><%= x.to_s.split(".pdf")[0] %></td>
+<td>
+<% aa = pass.split("-")[0] %><% bb = split_list[1] %><% cc = x.to_s.split(".pdf")[0].delete(" ")%>
+<% zz = "/exams/" + aa.downcase + "/" + aa + "-"+ bb + "-" + cc + "/index.html"%>
+          <% if @locked == "no"%>
+            <%= link_to image_tag("/assets/data-edit.png", height: '20px', width: '20px;'), zz, :target => "_blank" %>
+          <%else %>
+            <%if count == 0%>
+              <%= link_to image_tag("/assets/data-edit.png", height: '20px', width: '20px;'), zz, :target => "_blank" %>
+            <% else %>
+              <%= link_to image_tag("/assets/unlock.png", height: '40px', width: '40px;'), new_subscription_path %>
+            <% end %>
+
+          <% end %>
+
+</td>
+</tr>
+<% count = 1 %>
+
+<% end  %>
+<% end %>
+<% end %>
+
+</table>
+
+<% end %>
+
+
+
+<script>
+  $( document ).ready(function() {
+    $(".retake-home").click(function(){
+      var id =this.id;
+      window.location = '/questions/<%=params[:subject]%>/<%= params[:module_test]%>/'+id+'/1';
+     });
+   });   
+</script>

@@ -1,0 +1,19 @@
+var email = "<%= @email %>"
+var name = "<%= @name %>"
+var message = "<%= @message %>"
+
+validEmail(email, name, message);
+
+function validEmail(email, name, message) {
+    var r = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+	if((email == "")||(name == "")||(message == "")) {
+    	$("#contact-error").html('Please fill all of the fields')
+    }
+    else if(email.match(r) == null ) {
+    	$("#contact-error").html('Email is Invalid')
+    }
+    else{
+    	window.location = "<%= root_path %>"
+    }
+}
+

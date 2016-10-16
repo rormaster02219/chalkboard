@@ -1,0 +1,147 @@
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+
+<div class="popUpConfirm">
+  <h5>Are you sure</h5>
+  <div class="buttonsPopup">
+    <%= link_to "Submit",nil, :id=> "submit_subs_form" %>
+    <a href="#" class="GoBack" title="Go Back">Cancel</a>
+  </div>
+</div>
+
+<div class="subscription_error" style="display:none;">
+  <h5> </h5>
+  <div class="buttonsPopup">
+    <a href="#" class="GoBack" title="Go Back">Ok</a>
+  </div>
+</div>
+
+<section class="profile">
+  <div class="dTab"></div>
+  <h2>Subscribe Now!</h2>
+
+  <h5 style="text-align:center;"><img style="vertical-align:middle;" height = "40px" width="40px" src = "/assets/unlock.png"/>Unlock for only $15/yr!</h5>
+ <div class="radioBtnGrp" id = 'radioBtn' style="margin-left:42%;">
+
+  <span>
+    <b class="checked"></b>
+    <input type="radio" checked="checked" name="payment" value="credit" />Credit Card
+  </span>
+  <span>
+    <b class=""></b>
+    <input type="radio" name="payment" value="pin" />Pin Card
+  </span>
+ </div>
+
+  <%= form_for @subscription, :html => {:class => "profileData" } do |f|  %>
+    <% if @subscription.errors.any? %>
+      <div class="error_messages">  
+      </div>
+    <% end %>
+  
+    <div class="formRow">
+      <label>Email</label>
+      <span><span class="dividerFormCol">&nbsp;</span></span>
+      <div class="secondColForm">
+        <%= f.text_field :email, :value => current_student.email %>
+      </div>
+      <div class="cBoth"></div>
+    </div>
+
+    <div class="formRow">
+      <label>Student Id</label>
+      <span class="dividerFormCol">&nbsp;</span>
+      <div class="secondColForm yellow"><%= f.text_field :student_id, :value => current_student.id %></div>
+      <div class="cBoth"></div>
+      <div class="cBoth"></div>
+    </div>
+    <div class="formRow mT">
+      <label>Subject </label>
+      <span class="dividerFormCol"></span>
+      <div class="secondColForm">
+       <%= f.select :subject, options_for_select([ "mathematics","biology","chemistry","physics" ]) %>
+
+       <img src="/assets/customSelect.png"></div>
+      <div class="cBoth"></div>
+    </div>
+    <div id = 'credit_card'>
+    <% if @subscription.stripe_card_token.present? %>
+      <div class="formRow">
+        <label>Credit Card Holder</label>
+        <span class="dividerFormCol">:&nbsp;</span>
+        <div class="secondColForm yellow"> Credit card has been provided.</div>
+        <div class="cBoth"></div>
+        <div class="cBoth"></div>
+      </div>
+    <%else%>  
+      <div class="formRow">
+        <label>Credit Card Holder </label>
+        <span class="dividerFormCol">&nbsp;</span>
+        <div class="secondColForm">
+         <%= text_field_tag :card_holder, nil, name: nil %>
+        </div>
+        <div class="cBoth"></div>
+      </div>
+    <%end%>  
+    <div class="formRow mT">
+      <label>Credit Card Number </label>
+      <span class="dividerFormCol"></span>
+      <div class="secondColForm small" style="margin-bottom:0.875em">
+       <%= text_field_tag :card_number, nil, name: nil %>
+      </div>
+    </div>
+    <div class="formRow mT">
+      <label>Security Code (CW2) </label>
+      <span class="dividerFormCol"></span>
+      <div class="secondColForm">
+      <%= text_field_tag :card_code, nil, name: nil %></div>
+      <div class="cBoth"></div>
+    </div>
+    <div class="formRow mT">
+      <label>Card Expiration Month </label>
+      <span class="dividerFormCol"></span>
+      <div class="secondColForm small" style="margin-bottom: 5px;">
+        <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+        <img src="/assets/customSelect.png">
+      </div>
+      <div class="cBoth"></div>
+    </div>
+    <div class="formRow mT">
+      <label>Card Expiration Year </label>
+      <span class="dividerFormCol"></span>
+      <div class="secondColForm">
+        <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+        <img src="/assets/customSelect.png">
+      </div>
+      <div class="cBoth"></div>
+    </div>
+    </div>
+    <div id = 'pin_card'>
+      <div class="formRow mT">
+      <label>Pin Card Number </label>
+      <span class="dividerFormCol"></span>
+      <div class="secondColForm small" style="margin-bottom:0.875em">
+       <%= text_field_tag :pin_number, nil, {name: nil, id: 'pin_number'} %>
+      </div>
+    </div>
+   </div>
+    <div class="btn"><a href="#" class="commitChanges" title="Commit Change" rel="Commit Change">Submit</a></div>
+  <% end %>
+  </div>
+
+</section>
+
+<script>
+$("input:radio[name=payment]").click(function() {
+    var value = $(this).val();
+    if (value == "credit"){ 
+      $('#pin_card').hide()
+      $('#credit_card').show()
+    }else{
+      $('#credit_card').hide()
+      $('#pin_card').show()
+
+    }
+});
+</script>
+

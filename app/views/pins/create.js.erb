@@ -1,0 +1,4 @@
+<% if !@subs.nil? %>
+        <% @subs.save %>
+        window.location = "/subjects/<%= @subs.subject %>"
+<% end %>

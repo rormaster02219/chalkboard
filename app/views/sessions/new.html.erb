@@ -1,0 +1,60 @@
+<section>
+  <% provide(:title, "Sign in") %>
+
+<div class="whitePopUpSignIn forgot_password_reset" style="position:fixed; margin-left: 33%; margin-top: 5%; margin-left: 33%; margin-top: 5%;"> 
+        <h3>Sign in</h3>
+       <%= form_for(:session, url: sessions_path, :html => {:class => "login",:style=>"margin-top: 23px;"} ) do |f| %>
+        <div id="login-error" style="color:red;color:red;font-size:13px;font-weight: bold; "></div>
+            <p>
+              <%= f.label :"Username:", "Email",:style=>"text-align: right;margin-left: -2px;"%>
+              <%=text_field_tag "session[email]",nil,:placeholder=>'student@242chalkboard.com',:style=>"margin-left: 2px;"%>
+            </p>
+            <p class="label">
+              <label></label>
+              <span>enter email</span>
+            </p>
+            <p>
+              <%= f.label :"Password",:style=>"text-align: right;margin-left: -10px; "  %>
+              <%= f.password_field :password, class: "i1", placeholder: "********",:style=>"margin-left: 11px;" %>
+            </p>
+            <p class="label">
+              <label></label>
+              <span>enter password</span>
+            </p>
+            
+           <p class="btnPanel"><a class="yallowBtn login_path padding-set" rel="Log In">Log In</a></p>
+           <br/>
+            <p style="margin-left: 12%;">New user? <%= link_to "Sign up now!", signup_path,:class=>"student_signup",:style=>"text-decoration:none!important;color:#343434!important;"%></p>
+        <% end %>
+
+      </div>
+
+
+      <p class="centerText" style="display:none;">
+            <a class="forgetP in popup" rel="forgot_password_reset" href="#" title="Forget Passsword?" id="foofaa">Forget Passsword?</a>
+          </p>
+  </section>
+
+<script>
+$(document).ready(function() {
+  $('#foofaasignin a').trigger('click');
+    $(".student_signup").click(function(){
+          window.location.href="/signup"
+        }); 
+});
+</script>
+  
+
+<style>
+ h3 {
+    color: #343434;
+    font-family: amatic_scbold;
+    font-size: 47px;
+    font-weight: normal;
+    line-height: 0;
+    margin-right: 20px;
+    margin-top: 19px;
+    text-align: center;
+}
+
+</style>

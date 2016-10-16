@@ -1,0 +1,94 @@
+div.fancy-select {
+	position: relative;
+	font-size: 18px;
+	color: #46565D;
+}
+
+div.fancy-select.disabled {
+	opacity: 0.5;
+}
+
+
+
+div.fancy-select div.trigger {
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 7px 24px 7px 9px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+	width: 272px;
+	font-family:open_sanslight;
+	font-size:20px;
+	font-weight:normal;
+	color:#343434;
+	text-transform:none;
+	background:url("../images/sprite_1.png") no-repeat scroll -7px -268px rgba(0, 0, 0, 0);
+}
+
+
+
+
+div.fancy-select ul.options {
+  border-radius: 4px;
+  box-shadow: 2px 1px 12px #000000;
+  left: 0;
+  list-style: none outside none;
+  margin: 0;
+  max-height: 200px;
+  min-width: 310px;
+  opacity:0;
+  overflow: auto;
+  padding: 1px 0;
+  position: absolute;
+  text-align: left;
+  top: 40px !important;
+  visibility:hidden;
+  z-index: 50;
+}
+
+div.fancy-select ul.options.open {
+	visibility: visible;
+	top: 50px;
+	opacity: 1;
+}
+
+div.fancy-select ul.options.overflowing {
+	top: auto;
+	bottom: 40px;
+
+	transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+	-webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+	-ms-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+	-o-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+}
+
+div.fancy-select ul.options.overflowing.open {
+	top: auto;
+	bottom: 50px;
+
+	transition: opacity 300ms ease-out, bottom 300ms ease-out;
+	-webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+	-ms-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+	-o-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+}
+
+div.fancy-select ul.options li {
+	padding:12px;
+  background:#fff;
+  border-top: 1px solid #999999;
+  color: #323232;
+  padding: 10px 15px;
+	transition: all 150ms ease-out;
+	-webkit-transition: all 150ms ease-out;
+	-moz-transition: all 150ms ease-out;
+	-ms-transition: all 150ms ease-out;
+	-o-transition: all 150ms ease-out;
+	font-size:18px;
+}
+div.fancy-select ul.options li.hover {
+	background: #51D3DA;
+}

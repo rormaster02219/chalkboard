@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-au" lang="en-au">
+<head>
+<title>Chalk Board</title>
+<script language="javascript" src="js/html5.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<div class="wrapper">
+  <!--<div class="gradient"></div>-->
+  <div class="pattern"></div>
+  <div class="top">
+    <div class="topcenter">
+      <div class="topLeft">
+        <div class="topRight"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <div class="centerRight">
+      
+	  <header>
+        <nav> <a href="#" title="Chalk Board" rel="Chalk Board" class="logo"></a> <a href="#" title="Contact" rel="contactPopup" class="call popup"></a>
+          <div class="whitePopUp contactPopup"> <span class="arrow"></span>
+            <p>
+              <label>Name:</label>
+              <input type="text" value="Test Name" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p>
+              <label>Email:</label>
+              <input type="text" value="example@gmail.com" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <textarea></textarea>
+            <p class="btnPanel"><a href="#" class="yallowBtn">Send</a><a href="#" class="grayBtn">Reset</a></p>
+          </div>
+          <a href="#" title="Help" rel="socialPopup" class="hand popup"></a>
+          <div class="whitePopUp socialPopup"> <span class="arrow"></span>
+            <p><span count="100"></span><input type="image" src="images/tweet.jpg" alt="Twitter" title="Twitter" /></p>
+            <p><span count="80"></span><input type="image" src="images/facebook.jpg" alt="FaceBook" title="FaceBook" /></p>
+            <p><span count="345"></span><input type="image" src="images/googleP.jpg" alt="Google Plus" title="Google Plus" /></p>
+          </div>
+          <a href="#" title="Home" rel="invitePopUp" class="home popup"></a> <a href="#" title="Files" rel="loginPopup" class="in popup"></a>
+          <div class="whitePopUp loginPopup"> <span class="arrow"></span>
+            <p>
+              <label>User Name :</label>
+              <input type="text" value="example@gmail.com" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p>
+              <label>Password :</label>
+              <input type="password" class="i1" value="*********" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p class="btnPanel"><a href="#" class="yallowBtn">Log In</a></p>
+            <p class="centerText"><a class="forgetP" href="#">Forget Passsword?</a></p>
+          </div>
+          <a href="#" title="Invite" class="add"></a>
+          <div class="whitePopUp invitePopUp"> <span class="arrow"></span>
+            <p>
+              <label>Nick Name :</label>
+              <input type="text" value="bright 12" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(one word withoutspace)</span></p>
+            <p>
+              <label>User Name :</label>
+              <input type="text" value="example@gmail.com" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p>
+              <label>Password :</label>
+              <input type="password" class="i1" value="*********" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p>
+              <label>Reenter Password :</label>
+              <input type="password" value="*********" />
+            </p>
+            <p class="label">
+              <label></label>
+              <span>(error message here)</span></p>
+            <p class="customRadio">
+              <label></label>
+              <span><b class="checked"></b>
+              <input type="radio" checked="checked" name="inviteRadio" />
+              BJS</span><span><b></b>
+              <input type="radio" name="inviteRadio" />
+              BGCSE</span></p>
+            <p class="btnPanel"><a href="#" class="yallowBtn">Submit</a></p>
+          </div>
+          <div class="whitePopUp subjectsPopUp"> <span class="arrow"></span> <a href="#" class="eng"><span></span>
+            <label>ENGLISH</label>
+            </a> <a href="#" class="bio"><span></span>
+            <label>Biology</label>
+            </a> <a href="#" class="chm"><span></span>
+            <label>Chemistry</label>
+            </a> <a href="#" class="math"><span></span>
+            <label>Mathematics</label>
+            </a> <a href="#" class="phy"><span></span>
+            <label>Physics</label>
+            </a> </div>
+        <a href="#" title="Subjects" rel="subjectsPopUp" class="subject popup">Subjects</a> <a title="Home" class="quickReport">Quick Report</a> <a href="#" title="Report Card" class="reportCard">Report card</a> </nav>
+      </header>
+      <section>
+	   <div class="dTab"></div>
+        <div class="quickReport">
+          <div class="colReport">
+            <p class="title18 caps semiBold">Your Mode</p>
+            <div class="mode"> <span class="geek subRed">Geek</span> <span class="genius white">Genius</span>
+              <div class="cBoth"></div>
+              <div class="progressBar"> <span class="subRed">49</span>
+                <div class="prograssBarCode">
+                  <div class="subMarksP"></div>
+                  <div class="MarksP red"></div>
+                  <img src="images/progress.png" /> </div>
+                <span class="white">5</span></div>
+              <p class="blockC size16 centerText upFrame">Another <span class="subRed">12</span> modules & <span class="subRed">24</span> tests to go before you become a Genius.</p>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="colReport progressBarBox">
+            <p class="title18 caps semiBold">Over all answer report</p>
+            <div class="pb">
+              <label>Overall :</label>
+              <div class="progressBar yellowBar"> <span class="yellow">49</span>
+                <div class="prograssBarCode">
+                  <div class="subMarksP"></div>
+                  <div class="MarksP red" style="width:50px;"></div>
+                  <img src="images/progress.png" /> </div>
+                <span class="white">5</span></div>
+            </div>
+            <div class="pb">
+              <label>Overall :</label>
+              <div class="progressBar yellowBar"> <span class="yellow">49</span>
+                <div class="prograssBarCode">
+                  <div class="subMarksP"></div>
+                  <div class="MarksP red"></div>
+                  <img src="images/progress.png" /> </div>
+                <span class="white">5</span></div>
+            </div>
+            <div class="pb">
+              <label>Overall :</label>
+              <div class="progressBar yellowBar"> <span class="yellow">49</span>
+                <div class="prograssBarCode">
+                  <div class="subMarksP"></div>
+                  <div class="MarksP red" style="width:113px;"></div>
+                  <img src="images/progress.png" /> </div>
+                <span class="white">5</span></div>
+            </div>
+            <div class="pb">
+              <label>Overall :</label>
+              <div class="progressBar yellowBar"> <span class="yellow">49</span>
+                <div class="prograssBarCode">
+                  <div class="subMarksP"></div>
+                  <div class="MarksP red"></div>
+                  <img src="images/progress.png" /> </div>
+                <span class="white">5</span></div>
+            </div>
+            <div class="pb">
+              <label>Overall :</label>
+              <div class="progressBar yellowBar"> <span class="yellow">49</span>
+                <div class="prograssBarCode">
+                  <div class="subMarksP"></div>
+                  <div class="MarksP red" style="width:145px"></div>
+                  <img src="images/progress.png" /> </div>
+                <span class="white">5</span></div>
+            </div>
+            <div class="markers">
+              <label class="yellowB"></label>
+              <span class="yellowLabel">Correct</span>
+              <label class="whiteB"></label>
+              <span class="whiteLabel">Incorrect</span></div>
+          </div>
+          <div class="divider"></div>
+          <div class="colReport examDate">
+            <p class="title18 caps semiBold">Exam Dates to Remember:</p>
+            <p><span class="yellow semiBold">6 Days</span> to go for BGCSE - Physics Exam</p>
+            <p><span class="yellow semiBold">12 Days</span> to go for BGCSE - Physics Exam</p>
+            <p><span class="yellow semiBold">24 Days</span> to go for BGCSE - Physics Exam</p>
+            <p><span class="yellow semiBold">50 Days</span> to go for BGCSE - Physics Exam</p>
+            <p><span class="yellow semiBold">60 Days</span> to go for BGCSE - Physics Exam</p>
+            <p><span class="yellow semiBold">24 Days</span> to go for BGCSE - Physics Exam</p>
+          </div>
+          <div class="cBoth"></div>
+          <div class="noModules">% & No. of Modules Completed</div>
+          <div class="pieCharts">
+            <div class="PieBlock">
+              <p><span class="white">75%</span><span class="yellow">25%</span></p>
+              <div class="cBoth"></div>
+              <div class="pie EN">
+                <div class="pieContainer">
+                  <div class="pieBackground"></div>
+                  <div id="pieSlice1" class="hold">
+                    <div class="pieCircle"></div>
+                  </div>
+                </div>
+              </div>
+              <img src="images/circle.png" /> <span class="qReportIcon icon"></span>
+              <p><span class="white">75</span><span class="yellow">25</span></p>
+              <div class="cBoth"></div>
+              <p class="title18Black black caps upFrame">english</p>
+            </div>
+            <div class="divider"></div>
+            <div class="PieBlock">
+              <p><span class="white">75%</span><span class="yellow">25%</span></p>
+              <div class="cBoth"></div>
+              <div class="pie EN">
+                <div class="pieContainer">
+                  <div class="pieBackground"></div>
+                  <div id="pieSlice1" class="hold">
+                    <div class="pieCircle" style="-webkit-transform:rotate(138deg);-moz-transform:rotate(138deg);-o-transform:rotate(138deg);transform:rotate(138deg);"></div>
+                  </div>
+                </div>
+              </div>
+              <img src="images/circle.png" /> <span class="qReportIcon icon1"></span>
+              <p><span class="white">75</span><span class="yellow">25</span></p>
+              <div class="cBoth"></div>
+              <p class="title18Black black caps upFrame">english</p>
+            </div>
+            <div class="divider"></div>
+            <div class="PieBlock">
+              <p><span class="white">75%</span><span class="yellow">25%</span></p>
+              <div class="cBoth"></div>
+              <div class="pie EN">
+                <div class="pieContainer">
+                  <div class="pieBackground"></div>
+                  <div id="pieSlice1" class="hold">
+                    <div class="pieCircle" style="-webkit-transform:rotate(150deg);-moz-transform:rotate(150deg);-o-transform:rotate(150deg);transform:rotate(150deg);"></div>
+                  </div>
+                </div>
+              </div>
+              <img src="images/circle.png" /> <span class="qReportIcon icon2"></span>
+              <p><span class="white">75</span><span class="yellow">25</span></p>
+              <div class="cBoth"></div>
+              <p class="title18Black black caps upFrame">english</p>
+            </div>
+            <div class="divider"></div>
+            <div class="PieBlock">
+              <p><span class="white">75%</span><span class="yellow">25%</span></p>
+              <div class="cBoth"></div>
+              <div class="pie EN">
+                <div class="pieContainer">
+                  <div class="pieBackground"></div>
+                  <div id="pieSlice1" class="hold">
+                    <div class="pieCircle" style="-webkit-transform:rotate(100deg);-moz-transform:rotate(100deg);-o-transform:rotate(100deg);transform:rotate(100deg);"></div>
+                  </div>
+                </div>
+              </div>
+              <img src="images/circle.png" /> <span class="qReportIcon icon3"></span>
+              <p><span class="white">75</span><span class="yellow">25</span></p>
+              <div class="cBoth"></div>
+              <p class="title18Black black caps upFrame">english</p>
+            </div>
+            <div class="divider"></div>
+            <div class="PieBlock">
+              <p><span class="white">75%</span><span class="yellow">25%</span></p>
+              <div class="cBoth"></div>
+              <div class="pie EN out180">
+                <div class="pieContainer">
+                  <div class="pieBackground"></div>
+                  <div id="pieSlice1" class="hold">
+                    <div class="pieCircle" style="-webkit-transform:rotate(220deg);-moz-transform:rotate(220deg);-o-transform:rotate(220deg);transform:rotate(220deg);"></div>
+                  </div>
+                </div>
+              </div>
+              <img src="images/circle.png" /> <span class="qReportIcon icon4"></span>
+              <p><span class="white">75</span><span class="yellow">25</span></p>
+              <div class="cBoth"></div>
+              <p class="title18Black black caps upFrame">english</p>
+            </div>
+            <div class="cBoth"></div>
+            <div class="markers">
+              <label class="yellowB"></label>
+              <span class="yellowLabel">Completed</span>
+              <label class="whiteB"></label>
+              <span class="whiteLabel">Yet to complete</span></div>
+            <div class="noModules">% & No. of Test Completed</div>
+          </div>
+        </div>
+      </section>
+      <footer><a href="terms" rel="Terms and Conditions">T & C</a> | <a href="#" rel="Privacy policy">Privacy policy</a> |242 Chalk Board © 2013</footer>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bottomcenter">
+      <div class="bottomLeft">
+        <div class="bottomRight"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script language="javascript" src="js/jquery.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script language="javascript" src="js/script.js"></script>
+<script language="javascript" src="js/fancySelect.js"></script>
+</body>
+</html>
+</strong>
+</h6>

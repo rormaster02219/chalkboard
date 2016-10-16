@@ -1,0 +1,25 @@
+<% if !@result.nil? %>
+$(".pageWithVerification .solution").click(function(){
+	
+	var cMar =  - (eval($(".homeSliderChild ul").css("marginLeft").substring(0, $(".homeSliderChild ul").css("marginLeft").length - 2)));
+	currentSlide = cMar / ($(".homeSliderChild ul li").width());
+	$(".homeSliderChild ul li:eq(" + currentSlide + ") .leftChildQ .answerPanel .blackLabel22").html($(".homeSliderChild ul li:eq(" + currentSlide + ") .radioBtnGrp input[answer='true']").parent('.withSelectedText').text());
+	
+	if(($(this).html())=='Solution')
+	{
+	$(".homeSliderChild ul li:eq(" + currentSlide + ") .leftChildQ .answerPanel").show();
+	$(".homeSliderChild ul li:eq(" + currentSlide + ") .leftChildQ .questionPanel").hide()
+	$(this).html('Question');
+	}
+	else	{
+	$(".homeSliderChild ul li:eq(" + currentSlide + ") .leftChildQ .answerPanel").hide();
+	$(".homeSliderChild ul li:eq(" + currentSlide + ") .leftChildQ .questionPanel").show()
+	$(this).html('Solution');
+	}
+	return false;
+
+});
+<% else %>
+
+alert("To check solutionn please validate first")
+<% end %>

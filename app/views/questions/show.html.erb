@@ -1,0 +1,276 @@
+<%= javascript_include_tag "/design/js/jquery.timer.js" %>
+<div class="showHTMLInnerR">
+<section>
+  <div class="question_header_sections">
+    <div>
+	<div class="myStyleR MobileR">
+          <div class="markers" style="margin:<%if !@which.eql? "test"%>0 0 0 60px;<%else%>0 0 0 0px;<%end%>">
+            <label class="yellowB"></label>
+            <span class="yellowLabel"  style="width: <%if !@which.eql? "test"%> 86px;<%else%>115px;<%end%>"><%if !@which.eql? "test"%>Attempted<% else%>Attempted<%end %></span>
+            <label class="whiteB" ></label>
+            <span class="whiteLabel"><%if !@which.eql? "test"%>Unattempted<% else%>Unattempted<%end %></span> 
+          </div>
+          <div class="markers" style="margin:<%if @which.eql? "test"%>5px 0 0 0px;<%else%>5px 0 0 61px;<%end%>">
+            <label class="redB"></label>
+            <span class="redLabel" style="width: <%if !@which.eql? "test"%> 86px;<%else%>115px;<%end%>"><%if !@which.eql? "test"%> Correct<% else %>Time Complete<% end %></span>
+            <label class="whiteB"></label>
+            <span class="whiteLabel"><%if !@which.eql? "test"%>Incorrect<% else %>Time Remaining<% end %></span> 
+          </div>
+        </div>
+		
+      <div class="leftSection">
+          <div class="blackLabel18">ATTEMPTED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="total_completed" style="float: none;display:inline;">[<%= @total_completed_percentage%>%]</div></div>
+          <div class="progressBarBox">
+            <div class="pb">
+
+              <div class="progressBar yellowBar"> 
+                <span class="yellow completed"><%=@completed%></span> 
+                <div class="prograssBarCode">
+                  <div class="subMarksP"></div>
+                  <div style="width:<%= @total_completed_percentage%>%" class="MarksP red" id="total_completed_percentage_red"></div>
+                  <img src="/assets/progress.png">
+                </div> 
+                <!-- prograssBarCode -->
+                <span class="white total_test_question"><%=@total_test_question%></span>   
+              </div>
+              <!-- progressBar -->  
+            </div>
+            <!-- pb -->
+          </div>
+          <!-- progressBarBox -->
+      </div> 
+        
+      <div class="rightSection"> 
+        <div class="rightSectionbar" style="float: left; margin-top: 80px;">
+          <%if @which.eql? "test"%> 
+            <div class="blackLabel18">
+              TIME LEFT <span class="size15">(in minutes)</span>
+            </div>
+
+            <div class="progressBarBox">
+              <div class="pb">
+                <div class="progressBar redBar">
+                  <span class="subRed start_time" id = "startTime">0</span>
+                  <div class="prograssBarCode">
+                    <div class="subMarksP"></div>
+                    <div class="/subjects/<%= params[:subject] %> MarksP red" id='counter' style="width:0%">
+                    </div>
+                    <img src="/assets/progress.png">
+                  </div>
+                  <span class="white end_time" id = "countdown"><%=@timer%></span>                      
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <div class="blackLabel18">ACCURACY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="total_correct_percentage" style="float: none;display:inline;">[<%= @total_correct_percentage%>%]</div></div>
+            <div class="progressBarBox">
+              <div class="pb">
+                <div class="progressBar subRed">
+                  <span class="subRed total_correct" style="font-family:open_sanssemibold;"><%=@total_correct%></span>
+                  <div class="prograssBarCode">
+                    <div class="subMarksP"></div>
+                    <div style="width:<%= @total_correct_percentage%>%" class="MarksP red" id="total_correct_percentage_accuracy"></div>
+                    <img src="/assets/progress.png"/>
+                  </div> 
+                  <!-- prograssBarCode -->
+                  <span class="white total_incorrect"><%=@total_incorrect%></span>
+                </div>
+                <!-- progressBar -->
+              </div>
+              <!-- pb -->
+            </div>
+          <% end %>
+        </div>
+        <!-- progressBarBox -->
+        <div class="myStyleR" style="margin-top:6px;float:right;width:350px;position:absolute;right:0;">
+          <div class="markers" style="margin:<%if !@which.eql? "test"%>0 0 0 60px;<%else%>0 0 0 0px;<%end%>">
+            <label class="yellowB"></label>
+            <span class="yellowLabel"  style="width: <%if !@which.eql? "test"%> 86px;<%else%>115px;<%end%>"><%if !@which.eql? "test"%>Attempted<% else%>Attempted<%end %></span>
+            <label class="whiteB" ></label>
+            <span class="whiteLabel"><%if !@which.eql? "test"%>Unattempted<% else%>Unattempted<%end %></span> 
+          </div>
+          <div class="markers" style="margin:<%if @which.eql? "test"%>5px 0 0 0px;<%else%>5px 0 0 61px;<%end%>">
+            <label class="redB"></label>
+            <span class="redLabel" style="width: <%if !@which.eql? "test"%> 86px;<%else%>115px;<%end%>"><%if !@which.eql? "test"%> Correct<% else %>Time Complete<% end %></span>
+            <label class="whiteB"></label>
+            <span class="whiteLabel"><%if !@which.eql? "test"%>Incorrect<% else %>Time Remaining<% end %></span> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+
+    <div id = "questions_div" style="margin-top:172px;">
+      <%if @which.eql? "test"%>  
+        <%= render(:partial => 'test', :locals=> {:@question => @question, :@result => @result, :@fwd=>@fwd , :@back => @back } ) %>
+      <% else %>
+        <%= render(:partial => 'question', :locals=> {:@question => @question, :@result => @result, :@fwd=>@fwd , :@back => @back,:@total_correct=>@total_correct,:@total_incorrect=>@total_incorrect,:@total_completed_percentage=>@total_completed_percentage,:@total_test_question=>@total_test_question } ) %>
+      <% end %>
+    </div>
+  </section>
+</div>
+<script>
+<% if !@question.nil? %>
+  $("input:radio").click(function() {
+        
+    var click_id = "validate_ans"
+  
+    var module_test = "<%= params[:module_test]%>"
+    var question_id = "<%= @question.id%>"
+    var subject ="<%= params[:subject] %>"
+   
+     var answer = $("input:radio[name=sortByRadio]:checked").attr("val")
+   
+    var validate="validate"
+    var number = "<%= @question.number %>"
+    $.ajax({
+      type : 'GET',
+      url : '<%= questions_student_answer_create_path%>',
+      data: {'question_id' : question_id,'answer' : answer, "number" :number, "type" :click_id,"module_test" :module_test,"subject" :subject,"validate" :validate },
+      success: function () {
+    }
+  });
+  return false;
+  });
+
+$(document).ready(function(){
+
+  $(".showQuestion").click(function(){
+    $(".answerPanel").hide();
+    var que ="<%=@question.number%>"
+   
+    $("#"+que).show();
+
+    $(".show_answer").show();
+    $(".showQuestion").hide();
+
+    return false;
+  }); 
+
+  $(".show_answer").click(function(){
+    $(".questionPanel").hide();
+    $(".answerPanel").show();
+
+    $(".show_answer").hide();
+    $(".showQuestion").show();
+    return false;
+  })
+
+
+  $("#timeOver").click(function(){
+    window.location = '/subjects/<%= params[:subject] %>/<%= params[:module_test] %>';
+  });
+  $(".sliderPrvBtn ,.validate-module,.sliderNextBtn").click(function(){
+    
+    var click_id = $(this).attr("id");
+    var module_test = "<%= params[:module_test]%>"
+    var question_id = "<%= @question.id%>"
+
+    var subject ="<%= params[:subject] %>"
+    // $("input:radio").each(function() {
+    //     if($("input:radio").is(':checked'))
+    //     alert($("input:radio").val());
+    // });
+    
+    var validate="validate"
+    var number = "<%= @question.number %>"
+     $.ajax({
+      type : 'GET',
+      url : '<%= questions_student_answer_create_path%>',
+      data: {'question_id' : question_id, "number" :number, "type" :click_id,"module_test" :module_test,"subject" :subject,"validate" :validate },
+      success: function () {
+        }
+      });
+     return false;
+  });
+    
+  $(".exit").click(function(){
+       var module_test = "<%= params[:module_test]%>"      
+       var question_id = "<%= @question.id%>"
+       var answer = $(".rightChildQ input:radio[name=sortByRadio]:checked").attr("val")
+       var number = "<%= @question.number %>"
+       var url = "<%= @question.subject %>"
+       var mode = "<%= @question.module_test %>"
+       var subject ="<%= params[:subject] %>"
+       $.ajax({
+        type : 'GET',
+        url : '<%= questions_student_answer_create_path %>',
+        data: {'question_id' : question_id,'answer' : answer, "number" :number ,"module_test" :module_test,"subject" :subject,"url" : url,"mode" :mode, "data": "done now"},
+        success: function () {
+          // var total = "<%= @total %>"
+          // var question_no = "<%=@question.number %>"
+          }
+        });
+       });
+
+  });
+<% end %> 
+
+</script>
+
+<script>
+ $(".pageWithVerification .solution").click(function(){
+
+
+ if( ($(this).html()) =='Solution' )
+ {
+   $(".questionPanel").hide();
+   $(".answerPanel").show();
+   var cMar =  - (eval($(".homeSliderChild ul").css("marginLeft").substring(0, $(".homeSliderChild ul").css("marginLeft").length - 2)));
+    currentSlide = cMar / ($(".homeSliderChild ul li").width());
+    
+    $(".homeSliderChild ul li:eq(" + currentSlide + ") .leftChildQ .answerPanel .blackLabel22").html($(".homeSliderChild ul li:eq(" + currentSlide + ") .radioBtnGrp input[answer='true']").parent('.withSelectedText').text());
+   $(this).html('Question'); 
+    document.getElementById("que_solution").classList.add('validate-answer');
+   document.getElementById("que_solution").classList.remove('solution');
+    document.getElementById("validate_ans").classList.remove('validate-answer');
+   document.getElementById("validate_ans").classList.add('validate');
+ }
+ else  
+ {
+ 
+  $(".answerPanel").hide();
+  $(".questionPanel").show();
+  $(this).html('Solution');
+   document.getElementById("que_solution").classList.remove('validate-answer');
+   document.getElementById("que_solution").classList.add('solution');
+   document.getElementById("validate_ans").classList.remove('validate-answer');
+   document.getElementById("validate_ans").classList.add('validate');
+ }
+ return false;
+
+ });
+
+</script>
+
+ 
+<script>
+      MathJax.Hub.Typeset();
+</script>
+
+<script>
+$(function($) {
+    $(window).bind('load', function() {
+    var questionHeight = $("#question_image").height();
+    var questionImageText = $(".question_image_text").height();
+    var mathHeight = $(".MathJax_Display").height();
+    $("#questionText").attr("style","min-height:"+(questionHeight+questionImageText+66)+"px;overflow:hidden;");
+
+});
+})(jQuery);
+
+</script>
+
+
+<style>
+  .question_header_sections{
+    position: absolute;
+    width: 95%;
+    margin: 0 30px 0 50px;
+  }
+
+ /* .math span > .mrow{
+    position: inherit !important;
+  }*/
+</style>
